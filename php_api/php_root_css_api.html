@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RootCssAPI &mdash; rukzuk Module Development 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="rukzuk Module Development 0.1 documentation" href="../index.html"/>
+        <link rel="up" title="PHP API explained" href="index.html"/>
+        <link rel="prev" title="RootRenderAPI" href="php_root_render_api.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> rukzuk Module Development</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#what-is-a-module">What is a Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#what-is-a-unit">What is a Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#module-directory-structure">Module Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#render">Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#module-api-s">Module API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#simplemodule-helper">SimpleModule Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#php-api-s">PHP API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started.html#javascript-api-s">JavaScript API&#8217;s</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#your-first-module">Your First Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#advanced-module">Advanced Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#module-user-interface">Module User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#access-unit-data">Access Unit Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#listening-to-events-in-edit-mode">Listening to Events in Edit Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#dynamic-css-generation">Dynamic CSS Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#upload-your-module-via-ftp">Upload Your Module via FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html#export-and-import-your-module">Export and Import Your Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../js_module_api.html">JS Module API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../js_module_api.html#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js_module_api.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../js_module_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">PHP Module API&#8217;s</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="php_render_api.html">PHP Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_css_api.html">PHP CSS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_head_api.html">PHP Head API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_page_api.html">PHP Page API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_navigation_api.html">PHP Navigation API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_mediaicon_api.html">PHP Media Icon API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_mediaitem_api.html">PHP Media Item API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_mediaimage_api.html">PHP Media Image API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_root_render_api.html">PHP Root Render API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">PHP Root Css API</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">rukzuk Module Development</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">PHP API explained</a> &raquo;</li>
+      
+    <li>RootCssAPI</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/php_api/php_root_css_api.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="rootcssapi">
+<h1>RootCssAPI<a class="headerlink" href="#rootcssapi" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt>
+<tt class="descname">public  getAllUnitData ($rootUnit)</tt></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$rootUnit</strong> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public RenderAPIsRootAPIv1Unit Unit|null getParentUnit (RenderAPIsRootAPIv1RenderUnit Unit $unit)</tt></dt>
+<dd><p>Returns the parent unit for the given unit</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; unit array or unit id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">RenderAPIsRootAPIv1Unit Unit|null</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public mixed getFormValue (RenderAPIsRootAPIv1RenderUnit Unit $unit, mixed $key, mixed $fallbackValue = NULL)</tt></dt>
+<dd><p>Returns the form value of the given unit</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; unit that holds the form value</li>
+<li><strong>$key</strong> (<em>mixed</em>) &#8211; key of the requested form value</li>
+<li><strong>$fallbackValue</strong> (<em>mixed</em>) &#8211; result if formValue array misses key</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">mixed</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public RenderUnit Unit[] getChildren (RenderAPIsRootAPIv1RenderUnit Unit $unit)</tt></dt>
+<dd><p>Returns a list of all children units of the given unit</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; the unit object</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">RenderUnit Unit[]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public null|RenderUnit Unit getUnitById (RenderAPIsRootAPIv1$unitId $unitId $unitId)</tt></dt>
+<dd><p>Returns the Unit object for a given unitId, null if not found</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$unitId $unitId</strong> (<em>RenderAPIsRootAPIv1$unitId</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">null|RenderUnit Unit</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public null|RenderModuleInfo ModuleInfo getModuleInfo (RenderAPIsRootAPIv1RenderUnit Unit $unit)</tt></dt>
+<dd><p>Returns the module info object for the given unit, null if not found</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">null|RenderModuleInfo ModuleInfo</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public  getUnitCache (RenderAPIsRootAPIv1RenderUnit Unit $unit, string $key)</tt></dt>
+<dd><p>Get values from the permanent unit cache</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; </li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; unique key</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>throws exceptions:</strong> Exception Exception</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public  setUnitCache (RenderAPIsRootAPIv1RenderUnit Unit $unit, string $key, array $value)</tt></dt>
+<dd><p>Set values in the permanent unit cache</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Unit $unit</strong> (<em>RenderAPIsRootAPIv1RenderUnit</em>) &#8211; </li>
+<li><strong>$key</strong> (<em>string</em>) &#8211; unique key</li>
+<li><strong>$value</strong> (<em>array</em>) &#8211; any typ of array containing only primitive types</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>throws exceptions:</strong> Exception Exception</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public bool isEditMode ()</tt></dt>
+<dd><p>Returns true if the current renderings happens inside of the rukzuk cms edit mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public bool isPreviewMode ()</tt></dt>
+<dd><p>Returns true if the current renderings happens inside of the rukzuk cms preview mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public bool isLiveMode ()</tt></dt>
+<dd><p>Returns true if the current rendering happens on a live server (website is deployed).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public array getResolutions ()</tt></dt>
+<dd><p>Returns the resolutions array</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public bool isTemplate ()</tt></dt>
+<dd><p>Returns true when the current rendering task renders a template</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public bool isPage ()</tt></dt>
+<dd><p>Returns true when the current rendering task renders a page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public RenderAPIsRootAPIv1Navigation Navigation getNavigation ()</tt></dt>
+<dd><p>Returns the navigation object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">RenderAPIsRootAPIv1Navigation Navigation</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public string getColorById (string $colorId)</tt></dt>
+<dd><p>Convert a color id to a rgba() value</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$colorId</strong> (<em>string</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">string rgba() value of the given color id</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public array getColorScheme ()</tt></dt>
+<dd><p>Returns the Color Scheme as array map</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">array (color-id =&gt; color-value)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public RenderAPIsRootAPIv1MediaItem MediaItem getMediaItem (string $mediaId)</tt></dt>
+<dd><p>Returns the media item with the given media id or null if the image does not exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$mediaId</strong> (<em>string</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">RenderAPIsRootAPIv1MediaItem MediaItem</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>throws exceptions:</strong> MediaItemNotFoundException MediaItemNotFoundException</p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<tt class="descname">public string getInterfaceLanguage ()</tt></dt>
+<dd><p>Returns the language code of the current cms user interface.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">string The language code (examples: en; de; fr)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="php_root_render_api.html" class="btn btn-neutral" title="RootRenderAPI"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, rukzuk AG.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

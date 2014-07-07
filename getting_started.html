@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; rukzuk Module Development 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="rukzuk Module Development 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Tutorials" href="tutorials.html"/>
+        <link rel="prev" title="Welcome to the rukzuk Module Development documentation!" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> rukzuk Module Development</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-module">What is a Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-unit">What is a Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-directory-structure">Module Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#render">Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api-s">Module API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simplemodule-helper">SimpleModule Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-api-s">PHP API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#javascript-api-s">JavaScript API&#8217;s</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#your-first-module">Your First Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-module">Advanced Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#module-user-interface">Module User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#access-unit-data">Access Unit Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#listening-to-events-in-edit-mode">Listening to Events in Edit Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#dynamic-css-generation">Dynamic CSS Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#upload-your-module-via-ftp">Upload Your Module via FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#export-and-import-your-module">Export and Import Your Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="js_module_api.html">JS Module API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="php_api/index.html">PHP Module API&#8217;s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_render_api.html">PHP Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_css_api.html">PHP CSS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_head_api.html">PHP Head API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_page_api.html">PHP Page API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_navigation_api.html">PHP Navigation API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaicon_api.html">PHP Media Icon API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaitem_api.html">PHP Media Item API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaimage_api.html">PHP Media Image API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_render_api.html">PHP Root Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_css_api.html">PHP Root Css API</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">rukzuk Module Development</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/getting_started.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-a-module">
+<h2>What is a Module<a class="headerlink" href="#what-is-a-module" title="Permalink to this headline">¶</a></h2>
+<p>A module in rukzuk represents either a content component or a style component. Each module content component builds its own desired content and
+output the result. Whereby a module style component attaches style attributes to a parent module content component and subsequently to its children.</p>
+<p>There are three types of modules:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>default</td>
+<td>Content components like text, image, slider, form, …</td>
+</tr>
+<tr class="row-odd"><td>extension</td>
+<td>Modules which can extend other modules, e.g. all style components.</td>
+</tr>
+<tr class="row-even"><td>root</td>
+<td>The root module is responsible for the base HTML skeleton. It is always the first node in the design structure tree and can only be inserted once.</td>
+</tr>
+</tbody>
+</table>
+<p>Basic Example:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Rukzuk\Modules</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">my_module_text</span> <span class="k">extends</span> <span class="nx">SimpleModule</span>
+<span class="p">{</span>
+  <span class="sd">/**</span>
+<span class="sd">   * @param $renderApi</span>
+<span class="sd">   * @param \Render\Unit $unit</span>
+<span class="sd">   * @param \Render\ModuleInfo $moduleInfo</span>
+<span class="sd">   */</span>
+  <span class="k">public</span> <span class="k">function</span> <span class="nf">renderContent</span><span class="p">(</span><span class="nv">$renderApi</span><span class="p">,</span> <span class="nv">$unit</span><span class="p">,</span> <span class="nv">$moduleInfo</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;div&gt;&lt;span&gt;My Text&lt;/span&gt;&lt;/div&gt;&quot;</span><span class="p">;</span>
+    <span class="nv">$renderApi</span><span class="o">-&gt;</span><span class="na">renderChildren</span><span class="p">(</span><span class="nv">$unit</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+<p>Output Example:</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;MUNIT-43a1ee8c-954e-410f-9cfa-fd3758d35c13-MUNIT&quot;</span> <span class="na">class=</span><span class="s">&quot;my_module_text isModule&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;&lt;span&gt;</span>My Text<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- Rendered Children --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;MUNIT-24a3ee8c-954e-410f-9cfa-fd3758d67c48-MUNIT&quot;</span> <span class="na">class=</span><span class="s">&quot;rz_textfield isModule&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;h2&gt;</span>THE TRIANGLE CHALLENGE<span class="nt">&lt;br&gt;</span>17.5.2014<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can override modules if you name your new customized module with the origin module name. When you remove your derived module, the original module will come into play again.</p>
+</div>
+</div>
+<div class="section" id="what-is-a-unit">
+<h2>What is a Unit<a class="headerlink" href="#what-is-a-unit" title="Permalink to this headline">¶</a></h2>
+<p>A unit represents a module which is inserted into the structure tree of a rukzuk design or page. It provides specific information/data unique to the unit, e.g. the form values of the user interface. Furthermore, a unit references to a module which processes such data from the unit.</p>
+</div>
+<div class="section" id="module-directory-structure">
+<h2>Module Directory Structure<a class="headerlink" href="#module-directory-structure" title="Permalink to this headline">¶</a></h2>
+<p>The module folder name must be identical to the module ID. Furthermore, every module has a specific directory structure.</p>
+<img alt="_images/module_directory_structure.png" src="_images/module_directory_structure.png" />
+<p>Explaining the files in the above screen-shot</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">File</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>rz_anchor.php</td>
+<td>Main file containing the PHP class. The file name must be identical to the module ID.</td>
+</tr>
+<tr class="row-odd"><td>manifest.json</td>
+<td>Holds module relevant information such as module type, name, description, category, version etc. This file can be modified with the built-in user interface builder.</td>
+</tr>
+<tr class="row-even"><td>form.json</td>
+<td>This file has all the form information to build the module user interface. This file can be generated with the built-in user interface builder.</td>
+</tr>
+<tr class="row-odd"><td>custom.json</td>
+<td>Specifying JavaScript and CSS files required by the module. You can differentiate between edit and live mode.</td>
+</tr>
+<tr class="row-even"><td>main.css</td>
+<td>Contains static CSS used for the module style.</td>
+</tr>
+<tr class="row-odd"><td>editMode.js</td>
+<td>Allows further intervention in edit mode with custom behaviors.</td>
+</tr>
+<tr class="row-even"><td>editMode.css</td>
+<td>Contains static CSS used for the edit mode.</td>
+</tr>
+<tr class="row-odd"><td>css.js</td>
+<td>Logic for dynamic CSS generation based on the unit form values.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All folders named &#8220;notlive&#8221; are not going to be published to a live environment.</p>
+</div>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">It is recommended to program your module against PHP version 5.4</p>
+</li>
+<li><p class="first">FTP client to upload your module into your rukzuk space</p>
+<blockquote>
+<div><ul class="simple">
+<li>To endorse best development experience, it is advised to set-up your development environment to synchronize your development work via FTP.</li>
+<li>alternatively you can use the module import facility which allows to import modules as ZIP files</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Module API stubs (API interface reference)</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This documentation corresponds to the module API version 1.1 and above. There is no backwards compatibility to older versions. Although existing modules made with an older version of the module API will continue to work.</p>
+</div>
+</div>
+<div class="section" id="render">
+<h2>Render<a class="headerlink" href="#render" title="Permalink to this headline">¶</a></h2>
+<p>The render is responsible for going through a node tree containing units and its module to tell them to process and output their content.</p>
+<p>TODO</p>
+</div>
+<div class="section" id="module-api-s">
+<h2>Module API&#8217;s<a class="headerlink" href="#module-api-s" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="simplemodule-helper">
+<h2>SimpleModule Helper<a class="headerlink" href="#simplemodule-helper" title="Permalink to this headline">¶</a></h2>
+<p>The default root module &#8220;rz_root&#8221; comes with some wrappers to simplify the module development.
+For example it provides the class <tt class="docutils literal"><span class="pre">SimpleModule</span></tt> which is inherited by all default modules. It also has some convenient helpers for e.g. dynamic CSS generation, responsive images or HTML tag building.</p>
+<p>TODO</p>
+</div>
+<div class="section" id="php-api-s">
+<h2>PHP API&#8217;s<a class="headerlink" href="#php-api-s" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><a class="reference internal" href="php_api/php_render_api.html"><em>Render API</em></a></p>
+<blockquote>
+<div><ul class="simple">
+<li>access parent(s) and child(ren)</li>
+<li>access to other API&#8217;s such as CSS API, Head API</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Unit API</p>
+<blockquote>
+<div><ul class="simple">
+<li>get unit data information</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">ModuleInfo API</p>
+<blockquote>
+<div><ul class="simple">
+<li>provides information about the module used in the current unit</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><a class="reference internal" href="php_api/php_css_api.html"><em>CSS API</em></a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="php_api/php_head_api.html"><em>Head API</em></a></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All above API&#8217;s are available in &#8216;edit&#8217; &amp; &#8216;live&#8217; render mode except for the CSS API which is only available in &#8216;edit&#8217; mode.</p>
+</div>
+</div>
+<div class="section" id="javascript-api-s">
+<h2>JavaScript API&#8217;s<a class="headerlink" href="#javascript-api-s" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a></p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to the rukzuk Module Development documentation!"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, rukzuk AG.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

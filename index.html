@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to the rukzuk Module Development documentation! &mdash; rukzuk Module Development 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="rukzuk Module Development 0.1 documentation" href="#"/>
+        <link rel="next" title="Getting Started" href="getting_started.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="#" class="fa fa-home"> rukzuk Module Development</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-module">What is a Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-unit">What is a Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-directory-structure">Module Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#render">Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-api-s">Module API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#simplemodule-helper">SimpleModule Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#php-api-s">PHP API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#javascript-api-s">JavaScript API&#8217;s</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#your-first-module">Your First Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-module">Advanced Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#module-user-interface">Module User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#access-unit-data">Access Unit Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#listening-to-events-in-edit-mode">Listening to Events in Edit Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#dynamic-css-generation">Dynamic CSS Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#upload-your-module-via-ftp">Upload Your Module via FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#export-and-import-your-module">Export and Import Your Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="js_module_api.html">JS Module API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="php_api/index.html">PHP Module API&#8217;s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_render_api.html">PHP Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_css_api.html">PHP CSS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_head_api.html">PHP Head API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_page_api.html">PHP Page API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_navigation_api.html">PHP Navigation API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaicon_api.html">PHP Media Icon API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaitem_api.html">PHP Media Item API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaimage_api.html">PHP Media Image API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_render_api.html">PHP Root Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_css_api.html">PHP Root Css API</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">rukzuk Module Development</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to the rukzuk Module Development documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="welcome-to-the-rukzuk-module-development-documentation">
+<h1>Welcome to the rukzuk Module Development documentation!<a class="headerlink" href="#welcome-to-the-rukzuk-module-development-documentation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://rukzuk.com/">rukzuk</a> itself doesn&#8217;t generate any code, instead all resulting HTML, CSS and JavaScript code is generated by modules.
+You can extend the functionality and adjust every single line of code of the final websites by writing own modules or overwriting our default modules.</p>
+<p>The rukzuk module development documentation is comprised of tutorials, a reference section and cookbook articles explaining how to develop modules for rukzuk.</p>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Requirements: <a class="reference internal" href="getting_started.html"><em>What do I need to know to get started</em></a></li>
+<li>Tutorial: <a class="reference internal" href="tutorials.html"><em>Getting Started with rukzuk module development</em></a></li>
+<li>Render API docs: <a class="reference internal" href="php_api/php_render_api.html"><em>PHP Render API</em></a></li>
+</ul>
+</div>
+<div class="section" id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Helpdesk: <a class="reference external" href="https://help.rukzuk.com/">Questions and Answers</a></li>
+<li>Write us: <a class="reference external" href="mailto:help&#37;&#52;&#48;rukzuk&#46;com">help<span>&#64;</span>rukzuk<span>&#46;</span>com</a></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, rukzuk AG.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

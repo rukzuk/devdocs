@@ -1,0 +1,587 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Index &mdash; rukzuk Module Development 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="rukzuk Module Development 0.1 documentation" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> rukzuk Module Development</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-module">What is a Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-unit">What is a Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-directory-structure">Module Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#render">Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-api-s">Module API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#simplemodule-helper">SimpleModule Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#php-api-s">PHP API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#javascript-api-s">JavaScript API&#8217;s</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#your-first-module">Your First Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#advanced-module">Advanced Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#module-user-interface">Module User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#access-unit-data">Access Unit Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#listening-to-events-in-edit-mode">Listening to Events in Edit Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#dynamic-css-generation">Dynamic CSS Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#upload-your-module-via-ftp">Upload Your Module via FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#export-and-import-your-module">Export and Import Your Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="js_module_api.html">JS Module API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="php_api/index.html">PHP Module API&#8217;s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_render_api.html">PHP Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_css_api.html">PHP CSS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_head_api.html">PHP Head API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_page_api.html">PHP Page API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_navigation_api.html">PHP Navigation API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaicon_api.html">PHP Media Icon API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaitem_api.html">PHP Media Item API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaimage_api.html">PHP Media Image API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_render_api.html">PHP Root Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_css_api.html">PHP Root Css API</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">rukzuk Module Development</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li></li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#afterRemoveUnit">afterRemoveUnit() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#afterRenderPage">afterRenderPage() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#afterRenderUnit">afterRenderUnit() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#applyRichTextEditorConfig">applyRichTextEditorConfig() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#beforeInsertUnit">beforeInsertUnit() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#beforeMoveUnit">beforeMoveUnit() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#beforeRemoveUnit">beforeRemoveUnit() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#beforeRenderPage">beforeRenderPage() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#beforeRenderUnit">beforeRenderUnit() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#createPreviewTicket">createPreviewTicket() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#createTicketCallback">createTicketCallback() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#deselect">deselect() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#duplicate(unitId)   Boolean">duplicate(unitId)   Boolean() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#eventListenerCallback">eventListenerCallback() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#formValueChange">formValueChange() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#frameMouseEnter">frameMouseEnter() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#frameMouseOut">frameMouseOut() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#get(id, includeFormValues *opt* )   Object">get(id, includeFormValues *opt* )   Object() (built-in function)</a>
+  </dt>
+
+      
+  <dt>
+    getAllUnitIds(moduleId)   Array.&amp;lt
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="js_module_api.html#getAllUnitIds(moduleId)   Array.&lt;String>">String&gt;() (getAllUnitIds(moduleId)   Array method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="js_module_api.html#getColorById(colorId)   String">getColorById(colorId)   String() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getCurrentResolution()   String">getCurrentResolution()   String() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getImageUrl(mediaDbId, width *opt* , quality *opt* )   String">getImageUrl(mediaDbId, width *opt* , quality *opt* )   String() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getInsertable(unitId)   Object">getInsertable(unitId)   Object() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#getMediaUrl(mediaDbId, download *opt* )   String">getMediaUrl(mediaDbId, download *opt* )   String() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getModule(moduleId)   Object">getModule(moduleId)   Object() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getResolutions()   <a href="global.html#Resolutions">Resolutions</a>">getResolutions()   &lt;a href=&#34;global.html#Resolutions&#34;&gt;Resolutions&lt;/a&gt;() (getResolutions()   &lt;a href=&#34;global method)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getSelected(includeFormValues *opt* )   Object">getSelected(includeFormValues *opt* )   Object() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#getVisualHelpersState()   Object">getVisualHelpersState()   Object() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#i18n(input)   String|Mixed">i18n(input)   String|Mixed() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#insert(unitId, position, ownerUnitId)   Boolean">insert(unitId, position, ownerUnitId)   Boolean() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#moveDown(unitId)   Boolean">moveDown(unitId)   Boolean() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#moveUp(unitId)   Boolean">moveUp(unitId)   Boolean() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#new API">new API() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#Object EventFilter">Object EventFilter() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#on">on() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#openFormPanel">openFormPanel() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#openInsertWindow">openInsertWindow() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#openTreePanel">openTreePanel() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#preventRendering">preventRendering() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#processInsertedUnits(filter *opt* , callback *opt* , scope *opt* )   Array">processInsertedUnits(filter *opt* , callback *opt* , scope *opt* )   Array() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#refresh">refresh() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#remove">remove() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#resolutionChange">resolutionChange() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#select">select() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#set(id, key, value)   Boolean">set(id, key, value)   Boolean() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#setInfo(id, key, value)   Boolean">setInfo(id, key, value)   Boolean() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#setName(id, name)   Boolean">setName(id, name)   Boolean() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#showEditor">showEditor() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#treeMouseEnter">treeMouseEnter() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#treeMouseOut">treeMouseOut() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#un">un() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#unitDeselect">unitDeselect() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#unitFrameDeselect">unitFrameDeselect() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#unitFrameSelect">unitFrameSelect() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#unitSelect">unitSelect() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#unitTreeDeselect">unitTreeDeselect() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#unitTreeSelect">unitTreeSelect() (built-in function)</a>
+  </dt>
+
+      
+  <dt><a href="js_module_api.html#updateFormFieldConfig">updateFormFieldConfig() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="js_module_api.html#visualHelpersStateChange">visualHelpersStateChange() (built-in function)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, rukzuk AG.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

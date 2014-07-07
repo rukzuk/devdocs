@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorials &mdash; rukzuk Module Development 0.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="rukzuk Module Development 0.1 documentation" href="index.html"/>
+        <link rel="next" title="Class: API" href="js_module_api.html"/>
+        <link rel="prev" title="Getting Started" href="getting_started.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> rukzuk Module Development</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-module">What is a Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#what-is-a-unit">What is a Unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-directory-structure">Module Directory Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#render">Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#module-api-s">Module API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#simplemodule-helper">SimpleModule Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#php-api-s">PHP API&#8217;s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#javascript-api-s">JavaScript API&#8217;s</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#your-first-module">Your First Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-module">Advanced Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-user-interface">Module User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#access-unit-data">Access Unit Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listening-to-events-in-edit-mode">Listening to Events in Edit Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-css-generation">Dynamic CSS Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-your-module-via-ftp">Upload Your Module via FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-and-import-your-module">Export and Import Your Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="js_module_api.html">JS Module API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#methods">Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="js_module_api.html#events">Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="php_api/index.html">PHP Module API&#8217;s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_render_api.html">PHP Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_css_api.html">PHP CSS API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_head_api.html">PHP Head API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_page_api.html">PHP Page API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_navigation_api.html">PHP Navigation API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaicon_api.html">PHP Media Icon API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaitem_api.html">PHP Media Item API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_mediaimage_api.html">PHP Media Image API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_render_api.html">PHP Root Render API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php_api/php_root_css_api.html">PHP Root Css API</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">rukzuk Module Development</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/tutorials.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="tutorials">
+<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="your-first-module">
+<span id="id1"></span><h2>Your First Module<a class="headerlink" href="#your-first-module" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Find an unique ID for your module. Preferably prefix your module ID with a vendor name of your choice (e.g. mycompany_) to avoid name conflicts.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can override all default rukzuk modules (vendor prefix &#8220;rz_&#8221;) if you name your new customized module with the origin module ID. When you remove your derived module, the original module will come into play again.</p>
+</div>
+</li>
+<li><p class="first">Create a module directory following this <a class="reference internal" href="getting_started.html"><em>recommendation</em></a>.</p>
+</li>
+<li><p class="first">Start with a simple module:</p>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Rukzuk\Modules</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">mycompany_textfield</span> <span class="k">extends</span> <span class="nx">SimpleModule</span>
+<span class="p">{</span>
+  <span class="sd">/**</span>
+<span class="sd">   * @param $renderApi</span>
+<span class="sd">   * @param \Render\Unit $unit</span>
+<span class="sd">   * @param \Render\ModuleInfo $moduleInfo</span>
+<span class="sd">   */</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">renderContent</span><span class="p">(</span><span class="nv">$renderApi</span><span class="p">,</span> <span class="nv">$unit</span><span class="p">,</span> <span class="nv">$moduleInfo</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="k">echo</span> <span class="s2">&quot;&lt;div&gt;&lt;span&gt;My Text&lt;/span&gt;&lt;/div&gt;&quot;</span><span class="p">;</span>
+       <span class="nv">$renderApi</span><span class="o">-&gt;</span><span class="na">renderChildren</span><span class="p">(</span><span class="nv">$unit</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p class="first">Now upload the module into your rukzuk space as <a class="reference internal" href="#upload-via-ftp"><em>mentioned below</em></a>.</p>
+</li>
+<li><p class="first">Refresh the module repository by clicking the refresh button in the &#8220;Module Development&#8221; pop-up.</p>
+</li>
+<li><p class="first">Test your new module.</p>
+</li>
+</ol>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/master.zip">Download Module Example</a></p>
+</div>
+<div class="section" id="advanced-module">
+<h2>Advanced Module<a class="headerlink" href="#advanced-module" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Follow the steps 1, 2 and 3 from the <a class="reference internal" href="#your-first-module"><em>above instruction</em></a> to prepare for the advanced module development.</p>
+</li>
+<li><p class="first">Now we are going to include JavaScript functionality to your new module. In the example below, we utilize the jQuery library.</p>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;jquery&#39;</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">mycompany</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+                <span class="kd">var</span> <span class="nx">elementId</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">element</span><span class="p">).</span><span class="nx">prop</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="nx">elementId</span><span class="p">);</span>
+            <span class="p">};</span>
+
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.mycompany_textfield&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;mycompany_class&#39;</span><span class="p">);</span>
+                <span class="nx">mycompany</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="p">};</span>
+    <span class="p">};</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>You might ask yourself what the &#8220;define&#8221; stuff does. rukzuk is loading module JavaScript files on demand or dynamically as they are being called when a module is used. To achieve such behavior, rukzuk takes advantage of a third party JavaScript library called <a class="reference external" href="http://requirejs.org/">require.js</a>.</p>
+</li>
+<li><p class="first">In your <tt class="docutils literal"><span class="pre">custom.json</span></tt> you need to include the above JavaScript file:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+    <span class="nt">&quot;assets&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;js&quot;</span><span class="p">:[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;mycompany.js&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;live&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="module-user-interface">
+<span id="id2"></span><h2>Module User Interface<a class="headerlink" href="#module-user-interface" title="Permalink to this headline">¶</a></h2>
+<p>The below screen-shot illustrates the user interface of the &#8220;rz_anchor&#8221; module in edit mode.</p>
+<img alt="_images/rz_anchor_edit_panel.png" src="_images/rz_anchor_edit_panel.png" />
+<p>These edit mode forms also represent the unit data and can be created straight forward with the built-in module user interface builder. It allows you to add multiple tabs containing form fields, e.g. text input, number slider or image chooser.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Keep in mind that page editing rights are defined on tab-level after inserting the module into a design. Therefore, it is recommended to group form fields into tabs according to their right specific context.</p>
+</div>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Follow the steps 1, 2 and 3 from the <a class="reference internal" href="#your-first-module"><em>above instruction</em></a>.</li>
+<li>Open &#8220;Module Development&#8221; in the main menu of your rukzuk space</li>
+<li>Double-click on a module to edit</li>
+<li>Switch to the &#8220;User Interface&#8221; tab</li>
+</ol>
+<img alt="_images/rz_anchor_module_editor.png" src="_images/rz_anchor_module_editor.png" />
+<p>The <strong>Variable name</strong> must be unique in a module and will be used to access the value of each form field later on.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some form fields offer the possibility for responsive values. If enabled, a single form field can hold multiple values, one for each screen resolution of the website.</p>
+</div>
+</div></blockquote>
+<p>The form configuration will be saved in the file <tt class="docutils literal"><span class="pre">form.json</span></tt>.</p>
+</div>
+<div class="section" id="access-unit-data">
+<h2>Access Unit Data<a class="headerlink" href="#access-unit-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="in-php-mycompany-textfield-php">
+<h3>In PHP <tt class="docutils literal"><span class="pre">mycompany_textfield.php</span></tt><a class="headerlink" href="#in-php-mycompany-textfield-php" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-php"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Rukzuk\Modules</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">mycompany_textfield</span> <span class="k">extends</span> <span class="nx">SimpleModule</span>
+<span class="p">{</span>
+  <span class="sd">/**</span>
+<span class="sd">   * @param $renderApi</span>
+<span class="sd">   * @param \Render\Unit $unit</span>
+<span class="sd">   * @param \Render\ModuleInfo $moduleInfo</span>
+<span class="sd">   */</span>
+   <span class="k">public</span> <span class="k">function</span> <span class="nf">renderContent</span><span class="p">(</span><span class="nv">$renderApi</span><span class="p">,</span> <span class="nv">$unit</span><span class="p">,</span> <span class="nv">$moduleInfo</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="nv">$anchorName</span> <span class="o">=</span> <span class="nv">$renderApi</span><span class="o">-&gt;</span><span class="na">getFormValue</span><span class="p">(</span> <span class="nv">$unit</span><span class="p">,</span> <span class="s1">&#39;anchorName&#39;</span> <span class="p">);</span>
+       <span class="k">echo</span> <span class="s2">&quot;&lt;div&gt;&lt;span&gt;</span><span class="si">{</span><span class="nv">$anchorName</span><span class="si">}</span><span class="s2">&lt;/span&gt;&lt;/div&gt;&quot;</span><span class="p">;</span>
+       <span class="nv">$renderApi</span><span class="o">-&gt;</span><span class="na">renderChildren</span><span class="p">(</span><span class="nv">$unit</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</td></tr></table></div>
+<p>All declared unit data (see <a class="reference internal" href="#module-user-interface"><em>Module User Interface</em></a>) can be accessed by the following code fragment for example:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$renderApi-&gt;getFormValue( $unit, &#39;anchorName&#39; );</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The module can access unit information or data in edit mode as well as in an live environment.</p>
+</div>
+</div>
+<div class="section" id="in-javascript-editmode-js">
+<h3>In JavaScript <tt class="docutils literal"><span class="pre">editMode.js</span></tt><a class="headerlink" href="#in-javascript-editmode-js" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;CMS&#39;</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">CMS</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">init</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.mycompany_textfield&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="kd">var</span> <span class="nx">unitId</span>     <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">anchorName</span> <span class="o">=</span> <span class="nx">CMS</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">unitId</span><span class="p">).</span><span class="nx">formValues</span><span class="p">.</span><span class="nx">anchorName</span><span class="p">.</span><span class="nx">value</span>
+            <span class="p">});</span>
+        <span class="p">};</span>
+    <span class="p">};</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>All declared unit data (see module &#8220;edit mode&#8221; editor) can be accessed by the following code fragment for example:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">CMS</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">unitId</span><span class="p">).</span><span class="nx">formValues</span><span class="p">.</span><span class="nx">anchorName</span><span class="p">.</span><span class="nx">value</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">CMS</span></tt> API is globally available throughout the rukzuk web application while in edit mode. That means the custom module will not be able to consume information or data from the <tt class="docutils literal"><span class="pre">CMS</span></tt> API in an live environment (e.g. live hosting).</p>
+</div>
+</div>
+</div>
+<div class="section" id="listening-to-events-in-edit-mode">
+<h2>Listening to Events in Edit Mode<a class="headerlink" href="#listening-to-events-in-edit-mode" title="Permalink to this headline">¶</a></h2>
+<p>In case you want to react on user events, e.g. do something after the user changed a form value or after the user selected your module, you can do so by extending the <tt class="docutils literal"><span class="pre">JsModule</span></tt> of the default &#8220;rz_root&#8221; module. Your <tt class="docutils literal"><span class="pre">editMode.js</span></tt> could look like:</p>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;CMS&#39;</span><span class="p">,</span> <span class="s1">&#39;rz_root/notlive/js/baseJsModule&#39;</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">CMS</span><span class="p">,</span> <span class="nx">JsModule</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">JsModule</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+        <span class="c1">// alert when the user changed the form field &#39;anchorName&#39;</span>
+        <span class="nx">onFormValueChange</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">cfg</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">cfg</span><span class="p">.</span><span class="nx">key</span> <span class="o">===</span> <span class="s1">&#39;anchorName&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="nx">cfg</span><span class="p">.</span><span class="nx">unitId</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+
+        <span class="c1">// alert when the user selects your module</span>
+        <span class="nx">onUnitSelect</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">cfg</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">cfg</span><span class="p">.</span><span class="nx">unitId</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>Please have a look at the <a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a> for all available events.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Instead of a complete page reload only the DOM nodes of a module get replaced when the user changes the form values in edit mode. So you have to re-attach listeners on DOM elements on the <tt class="docutils literal"><span class="pre">afterRenderUnit</span></tt> event. If you set your listeners in the <tt class="docutils literal"><span class="pre">initUnit</span></tt> method, the <tt class="docutils literal"><span class="pre">JsModule</span></tt> helper takes care about that.</p>
+</div>
+</div>
+<div class="section" id="dynamic-css-generation">
+<h2>Dynamic CSS Generation<a class="headerlink" href="#dynamic-css-generation" title="Permalink to this headline">¶</a></h2>
+<p>The default &#8220;rz_root&#8221; module comes with a handy helper for dynamic CSS generation. Based on the form values in the unit data CSS code will be generated.
+All dynamic CSS logic of a module is handled in the file <tt class="docutils literal"><span class="pre">css.js</span></tt> and is based on the third party JavaScript library <a class="reference external" href="http://absurdjs.com/">AbsurdJS</a>.</p>
+<p>Our <tt class="docutils literal"><span class="pre">DynCSS</span></tt> helper takes care about responsive values and media queries as well as selector nesting according to the structure tree: all CSS styles defined in a module can only apply to the module itself and subordinate modules.
+It also provides a little API e.g. for resolving colors or image URLs.</p>
+<div class="highlight-javascript"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">DynCSS</span><span class="p">.</span><span class="nx">defineModule</span><span class="p">(</span><span class="s1">&#39;rz_anchor&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">api</span><span class="p">,</span> <span class="nx">v</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="c1">// this gets applied to the module itself</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="nx">api</span><span class="p">.</span><span class="nx">getColorById</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">cssBackgroundColor</span><span class="p">),</span>
+
+        <span class="c1">// these styles are for child elements with the class &quot;anchor&quot;</span>
+        <span class="s1">&#39;&amp; &gt; .anchor&#39;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">textAlign</span><span class="o">:</span> <span class="nx">v</span><span class="p">.</span><span class="nx">cssVisualHelperValign</span><span class="p">,</span>
+            <span class="nx">backgroundImage</span><span class="o">:</span> <span class="s1">&#39;url(&#39;</span> <span class="o">+</span> <span class="nx">api</span><span class="p">.</span><span class="nx">getImageUrl</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">cssBackgroundImage</span><span class="p">,</span> <span class="nx">v</span><span class="p">.</span><span class="nx">cssBackgroundImageSize</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The variable name of form fields which should trigger CSS re-generation must begin with &#8220;css&#8221;.</p>
+</div>
+<p>Please refer to the <a class="reference external" href="http://absurdjs.com/pages/css-preprocessing/basics/">AbsurdJS documentation</a> for further syntax details.</p>
+</div>
+<div class="section" id="upload-your-module-via-ftp">
+<span id="upload-via-ftp"></span><h2>Upload Your Module via FTP<a class="headerlink" href="#upload-your-module-via-ftp" title="Permalink to this headline">¶</a></h2>
+<p>You can directly upload your module through FTP. The FTP connection details can be found in the &#8220;Module Development&#8221; pop-up in your rukzuk space.</p>
+</div>
+<div class="section" id="export-and-import-your-module">
+<h2>Export and Import Your Module<a class="headerlink" href="#export-and-import-your-module" title="Permalink to this headline">¶</a></h2>
+<p>To easily use your module in other websites or rukzuk spaces you can use the export and import facility in the &#8220;Module Development&#8221; pop-up.</p>
+<img alt="_images/rukzuk_module_import.png" src="_images/rukzuk_module_import.png" />
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="js_module_api.html" class="btn btn-neutral float-right" title="Class: API"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting Started"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, rukzuk AG.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
