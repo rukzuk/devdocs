@@ -1,6 +1,6 @@
 <?php
 
-return new Sami\Sami(__DIR__.'/../build/stubs', array(
+return new Sami\Sami(__DIR__.'/../stubs/php', array(
     'theme'                => 'rukzuk_rst',
     'title'                => 'rukzuk API',
     'build_dir'            => __DIR__.'/../build/php',

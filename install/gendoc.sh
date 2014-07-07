@@ -68,7 +68,7 @@ function compress_stubs(){
         if [ ! -d "$build_download_directory" ]; then
 			mkdir -p "$build_download_directory"
         fi
-        zip -r build/html/_downloads/stubs.zip build/stubs/
+        zip -r build/html/_downloads/stubs.zip stubs/php
     else
         echo "------------ command zip not found"
         exit 1

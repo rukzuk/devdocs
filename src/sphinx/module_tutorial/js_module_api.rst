@@ -40,9 +40,21 @@ Methods
 
 .. js:function:: applyRichTextEditorConfig(unitId, section, config) 
 
-	:param String unitId: The id of the unit
-	:param String section: The name of the section
-	:param Object config: The RichTextEditor config object which will be merged with the default config
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param String section: 
+
+	.. raw:: html 
+
+		The name of the section
+	:param Object config: 
+
+	.. raw:: html 
+
+		The RichTextEditor config object which will be merged with the default config
 
 
 
@@ -115,9 +127,21 @@ Example
 
 .. js:function:: createPreviewTicket(callback, options *opt* , options.protect, options.credentials, options.credentials.username, options.credentials.password, options.ticketLifetime, options.sessionLifetime, options.remainingCalls, scope *opt* ) 
 
-	:param CMS.api.API~createTicketCallback callback: The callback function to be called after the ticket has been created
-	:param Object optionsoptional: Configuration of the ticket, e.g. to protect it with credentials
-	:param Object scopeoptional: The object in whose scope the callback function should be executed
+	:param CMS.api.API~createTicketCallback callback: 
+
+	.. raw:: html 
+
+		The callback function to be called after the ticket has been created
+	:param Object optionsoptional: 
+
+	.. raw:: html 
+
+		Configuration of the ticket, e.g. to protect it with credentials
+	:param Object scopeoptional: 
+
+	.. raw:: html 
+
+		The object in whose scope the callback function should be executed
 
 
 
@@ -179,7 +203,11 @@ Deselects the specified unit in both tree and iframe.
 
 .. js:function:: duplicate(unitId)   Boolean
 
-	:param String unitId: The id of the unit which is to be duplicated
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit which is to be duplicated
  
 
 
@@ -201,8 +229,16 @@ Duplicates the given unit
 
 .. js:function:: get(id, includeFormValues *opt* )   Object
 
-	:param String id: The id of the unit
-	:param Boolean includeFormValuesoptionaltrue: include the formValues
+	:param String id: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param Boolean includeFormValuesoptionaltrue: 
+
+	.. raw:: html 
+
+		include the formValues
  
 
 
@@ -224,7 +260,11 @@ Gets the configuration of the unit.
 
 .. js:function:: getAllUnitIds(moduleId)   Array.&lt;String>
 
-	:param String moduleId: unit ids from the given module id
+	:param String moduleId: 
+
+	.. raw:: html 
+
+		unit ids from the given module id
  
 
 
@@ -246,7 +286,11 @@ Returns the unit ids of <b>all</b> units of a specific module
 
 .. js:function:: getColorById(colorId)   String
 
-	:param String colorId: The id of the color
+	:param String colorId: 
+
+	.. raw:: html 
+
+		The id of the color
  
 
 
@@ -288,9 +332,21 @@ Returns the id currently active resolution
 
 .. js:function:: getImageUrl(mediaDbId, width *opt* , quality *opt* )   String
 
-	:param String mediaDbId: for example: MDB-uuid-MDB
-	:param Number widthoptional: width of the image; 0 = original size (height is determined automatically)
-	:param Number qualityoptional: quality 0 (bad) - 100 (best) - works only on formats that support it, like jpg
+	:param String mediaDbId: 
+
+	.. raw:: html 
+
+		for example: MDB-uuid-MDB
+	:param Number widthoptional: 
+
+	.. raw:: html 
+
+		width of the image; 0 = original size (height is determined automatically)
+	:param Number qualityoptional: 
+
+	.. raw:: html 
+
+		quality 0 (bad) - 100 (best) - works only on formats that support it, like jpg
  
 
 
@@ -312,7 +368,11 @@ Get image URL by Media DB item
 
 .. js:function:: getInsertable(unitId)   Object
 
-	:param String unitId: The id of the unit in whose context units are going to be inserted
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit in whose context units are going to be inserted
  
 
 
@@ -336,7 +396,15 @@ which can be inserted (TODO: this is only valid in the page context? Are these G
 .. js:function:: getMediaUrl(mediaDbId, download *opt* )   String
 
 	:param String mediaDbId: 
-	:param Boolean downloadoptional: weather the response should download the file (content-disposition: attachment)
+
+	.. raw:: html 
+
+		
+	:param Boolean downloadoptional: 
+
+	.. raw:: html 
+
+		weather the response should download the file (content-disposition: attachment)
  
 
 
@@ -358,7 +426,11 @@ Get Media URL by Media DB ID
 
 .. js:function:: getModule(moduleId)   Object
 
-	:param String moduleId: The id of the module
+	:param String moduleId: 
+
+	.. raw:: html 
+
+		The id of the module
  
 
 
@@ -400,7 +472,11 @@ Get configured resolutions (breakpoints) for responsive CSS
 
 .. js:function:: getSelected(includeFormValues *opt* )   Object
 
-	:param Boolean includeFormValuesoptional: include the formValues; default = true
+	:param Boolean includeFormValuesoptional: 
+
+	.. raw:: html 
+
+		include the formValues; default = true
  
 
 
@@ -442,7 +518,11 @@ Returns the state of the visual helpers (if they should be visible/hidden)
 
 .. js:function:: i18n(input)   String|Mixed
 
-	:param Object input: An object with texts for all available languages (e.g.      {de: "Hallo Welt!", en: "Hello World!"}
+	:param Object input: 
+
+	.. raw:: html 
+
+		An object with texts for all available languages (e.g.      {de: "Hallo Welt!", en: "Hello World!"}
  
 
 
@@ -464,9 +544,21 @@ Gives the text in current application language for given input
 
 .. js:function:: insert(unitId, position, ownerUnitId)   Boolean
 
-	:param String unitId: The id of the unit which should be inserted
-	:param String position: The position where it should be inserted (above, below, inside)
-	:param String ownerUnitId: The id of the unit in whose context the new unit should be inserted
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit which should be inserted
+	:param String position: 
+
+	.. raw:: html 
+
+		The position where it should be inserted (above, below, inside)
+	:param String ownerUnitId: 
+
+	.. raw:: html 
+
+		The id of the unit in whose context the new unit should be inserted
  
 
 
@@ -490,6 +582,10 @@ the given position
 .. js:function:: moveDown(unitId)   Boolean
 
 	:param unitId: 
+
+	.. raw:: html 
+
+		
  
 
 
@@ -512,6 +608,10 @@ Moves the unit down in the structure tree
 .. js:function:: moveUp(unitId)   Boolean
 
 	:param unitId: 
+
+	.. raw:: html 
+
+		
  
 
 
@@ -533,10 +633,26 @@ Moves the unit up in the structure tree
 
 .. js:function:: on(event, filter *opt* , handler, scope *opt* ) 
 
-	:param String event: The name of the event, use one of the following:        <ul>          <li><a href="CMS.api.API.html#event:formValueChange">formValueChange</a></li>          <li><a href="CMS.api.API.html#event:unitSelect">unitSelect</a></li>          <li><a href="CMS.api.API.html#event:unitDeselect">unitDeselect</a></li>          <li><a href="CMS.api.API.html#event:showEditor">showEditor</a></li>          <li><a href="CMS.api.API.html#event:beforeRenderPage">beforeRenderPage</a></li>          <li><a href="CMS.api.API.html#event:afterRenderPage">afterRenderPage</a></li>          <li><a href="CMS.api.API.html#event:beforeRenderUnit">beforeRenderUnit</a></li>          <li><a href="CMS.api.API.html#event:afterRenderUnit">afterRenderUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeInsertUnit">beforeInsertUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeMoveUnit">beforeMoveUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeRemoveUnit">beforeRemoveUnit</a></li>          <li><a href="CMS.api.API.html#event:afterRemoveUnit">afterRemoveUnit</a></li>          <li><a href="CMS.api.API.html#event:unitTreeSelect">unitTreeSelect</a></li>          <li><a href="CMS.api.API.html#event:unitTreeDeselect">unitTreeDeselect</a></li>          <li><a href="CMS.api.API.html#event:treeMouseEnter">treeMouseEnter</a></li>          <li><a href="CMS.api.API.html#event:treeMouseOut">treeMouseOut</a></li>          <li><a href="CMS.api.API.html#event:unitFrameSelect">unitFrameSelect</a></li>          <li><a href="CMS.api.API.html#event:unitFrameDeselect">unitFrameDeselect</a></li>          <li><a href="CMS.api.API.html#event:frameMouseEnter">frameMouseEnter</a></li>          <li><a href="CMS.api.API.html#event:frameMouseOut">frameMouseOut</a></li>          <li><a href="CMS.api.API.html#event:visualHelpersStateChange">visualHelpersStateChange</a></li>        </ul>
-	:param CMS.api.API~EventFilter|String filteroptional: The id of a unit or a filter object
-	:param CMS.api.API~eventListenerCallback handler: The callback function
-	:param Object scopeoptional: The execution context for the event handler
+	:param String event: 
+
+	.. raw:: html 
+
+		The name of the event, use one of the following:        <ul>          <li><a href="CMS.api.API.html#event:formValueChange">formValueChange</a></li>          <li><a href="CMS.api.API.html#event:unitSelect">unitSelect</a></li>          <li><a href="CMS.api.API.html#event:unitDeselect">unitDeselect</a></li>          <li><a href="CMS.api.API.html#event:showEditor">showEditor</a></li>          <li><a href="CMS.api.API.html#event:beforeRenderPage">beforeRenderPage</a></li>          <li><a href="CMS.api.API.html#event:afterRenderPage">afterRenderPage</a></li>          <li><a href="CMS.api.API.html#event:beforeRenderUnit">beforeRenderUnit</a></li>          <li><a href="CMS.api.API.html#event:afterRenderUnit">afterRenderUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeInsertUnit">beforeInsertUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeMoveUnit">beforeMoveUnit</a></li>          <li><a href="CMS.api.API.html#event:beforeRemoveUnit">beforeRemoveUnit</a></li>          <li><a href="CMS.api.API.html#event:afterRemoveUnit">afterRemoveUnit</a></li>          <li><a href="CMS.api.API.html#event:unitTreeSelect">unitTreeSelect</a></li>          <li><a href="CMS.api.API.html#event:unitTreeDeselect">unitTreeDeselect</a></li>          <li><a href="CMS.api.API.html#event:treeMouseEnter">treeMouseEnter</a></li>          <li><a href="CMS.api.API.html#event:treeMouseOut">treeMouseOut</a></li>          <li><a href="CMS.api.API.html#event:unitFrameSelect">unitFrameSelect</a></li>          <li><a href="CMS.api.API.html#event:unitFrameDeselect">unitFrameDeselect</a></li>          <li><a href="CMS.api.API.html#event:frameMouseEnter">frameMouseEnter</a></li>          <li><a href="CMS.api.API.html#event:frameMouseOut">frameMouseOut</a></li>          <li><a href="CMS.api.API.html#event:visualHelpersStateChange">visualHelpersStateChange</a></li>        </ul>
+	:param CMS.api.API~EventFilter|String filteroptional: 
+
+	.. raw:: html 
+
+		The id of a unit or a filter object
+	:param CMS.api.API~eventListenerCallback handler: 
+
+	.. raw:: html 
+
+		The callback function
+	:param Object scopeoptional: 
+
+	.. raw:: html 
+
+		The execution context for the event handler
 
 
 
@@ -558,8 +674,16 @@ Register listener for a CMS Event
 
 .. js:function:: openFormPanel(varName *opt* , showPanel *opt* ) 
 
-	:param String varNameoptional: The name of the unit property whose form group has to be opened
-	:param Boolean showPaneloptionaltrue: <tt>false</tt> to prevent activation of the containing form panel.
+	:param String varNameoptional: 
+
+	.. raw:: html 
+
+		The name of the unit property whose form group has to be opened
+	:param Boolean showPaneloptionaltrue: 
+
+	.. raw:: html 
+
+		<tt>false</tt> to prevent activation of the containing form panel.
 
 
 
@@ -582,8 +706,16 @@ If no argument is passed, it will just bring the form panel to front.
 
 .. js:function:: openInsertWindow(unitId *opt* , position *opt* ) 
 
-	:param String unitIdoptional: The id of the unit in whose context the insert window should be opened
-	:param Integer positionoptional: The default position choice in the dialog. Possible values:<ul>      <li>-1 - above</li>      <li> 0 - inside</li>      <li> 1 - below (default)</li>      </ul>
+	:param String unitIdoptional: 
+
+	.. raw:: html 
+
+		The id of the unit in whose context the insert window should be opened
+	:param Integer positionoptional: 
+
+	.. raw:: html 
+
+		The default position choice in the dialog. Possible values:<ul>      <li>-1 - above</li>      <li> 0 - inside</li>      <li> 1 - below (default)</li>      </ul>
 
 
 
@@ -649,9 +781,21 @@ NOTE: Call to this function is only allowed in the following event handlers:
 
 .. js:function:: processInsertedUnits(filter *opt* , callback *opt* , scope *opt* )   Array
 
-	:param Object filteroptional: A filter object, e.g. to filter by moduleId
-	:param function callbackoptional: The callback function to be called for each inserted unit
-	:param Object scopeoptional: The object in whose scope the callback function should be executed
+	:param Object filteroptional: 
+
+	.. raw:: html 
+
+		A filter object, e.g. to filter by moduleId
+	:param function callbackoptional: 
+
+	.. raw:: html 
+
+		The callback function to be called for each inserted unit
+	:param Object scopeoptional: 
+
+	.. raw:: html 
+
+		The object in whose scope the callback function should be executed
  
 
 
@@ -673,7 +817,11 @@ Processes all units which were inserted before the current page/template reload.
 
 .. js:function:: refresh(unitId *opt* ) 
 
-	:param String unitIdoptional: The id of the unit which should be re-rendered
+	:param String unitIdoptional: 
+
+	.. raw:: html 
+
+		The id of the unit which should be re-rendered
 
 
 
@@ -696,10 +844,26 @@ given the whole page.
 
 .. js:function:: remove(unitId, showConfirmation *opt* , callback *opt* , scope *opt* ) 
 
-	:param String unitId: The id of the unit which is to be deleted.
-	:param Boolean showConfirmationoptional: Whether the CMS should ask the user for confirmation before removing the unit
-	:param Boolean callbackoptional: The function which will be executed when the unit is actually deleted or not
-	:param Object scopeoptional: The object in whose scope the callback function should be executed
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit which is to be deleted.
+	:param Boolean showConfirmationoptional: 
+
+	.. raw:: html 
+
+		Whether the CMS should ask the user for confirmation before removing the unit
+	:param Boolean callbackoptional: 
+
+	.. raw:: html 
+
+		The function which will be executed when the unit is actually deleted or not
+	:param Object scopeoptional: 
+
+	.. raw:: html 
+
+		The object in whose scope the callback function should be executed
 
 
 
@@ -721,7 +885,11 @@ Removes the specified unit.
 
 .. js:function:: select(unitId) 
 
-	:param String unitId: The id of the unit which should be selected
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit which should be selected
 
 
 
@@ -743,9 +911,21 @@ Selects the specified unit in both tree and iframe.
 
 .. js:function:: set(id, key, value)   Boolean
 
-	:param String id: The id of the unit
-	:param String key: The name of the unit property which is changed
-	:param Mixed value: The new value of the unit property
+	:param String id: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param String key: 
+
+	.. raw:: html 
+
+		The name of the unit property which is changed
+	:param Mixed value: 
+
+	.. raw:: html 
+
+		The new value of the unit property
  
 
 
@@ -768,9 +948,21 @@ of the specified unit and updates the editor window
 
 .. js:function:: setInfo(id, key, value)   Boolean
 
-	:param String id: The id of the unit
-	:param String key: The name of the meta property which is changed
-	:param Mixed value: The new value of the meta property
+	:param String id: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param String key: 
+
+	.. raw:: html 
+
+		The name of the meta property which is changed
+	:param Mixed value: 
+
+	.. raw:: html 
+
+		The new value of the meta property
  
 
 
@@ -793,8 +985,16 @@ settings (replaces <a href="CMS.api.API.html#setName">CMS.api.API#setName</a>)
 
 .. js:function:: setName(id, name)   Boolean
 
-	:param String id: The id of the unit
-	:param String name: The new name of the unit
+	:param String id: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param String name: 
+
+	.. raw:: html 
+
+		The new name of the unit
  
 
 
@@ -816,7 +1016,11 @@ Updates the specified unit's name
 
 .. js:function:: un(event) 
 
-	:param String event: The name of the event
+	:param String event: 
+
+	.. raw:: html 
+
+		The name of the event
 
 
 
@@ -838,9 +1042,21 @@ Remove listener for a CMS Event
 
 .. js:function:: updateFormFieldConfig(unitId, key, config) 
 
-	:param String unitId: The id of the unit
-	:param String key: The variable name of the form field
-	:param Object config: The form field config object
+	:param String unitId: 
+
+	.. raw:: html 
+
+		The id of the unit
+	:param String key: 
+
+	.. raw:: html 
+
+		The variable name of the form field
+	:param Object config: 
+
+	.. raw:: html 
+
+		The form field config object
 
 
 
@@ -886,7 +1102,11 @@ Type Definitions
 
 .. js:function:: createTicketCallback(ticket, ticket.id, ticket.url, ticket.protect, ticket.credentials, ticket.credentials.username, ticket.credentials.password, ticket.ticketLifetime, ticket.sessionLifetime, ticket.remainingCalls) 
 
-	:param Object ticket: resulting ticket object
+	:param Object ticket: 
+
+	.. raw:: html 
+
+		resulting ticket object
 
 
 
@@ -932,7 +1152,11 @@ Event filter
 
 .. js:function:: eventListenerCallback(config) 
 
-	:param Object config: config object depends on type of event
+	:param Object config: 
+
+	.. raw:: html 
+
+		config object depends on type of event
  
 
 
@@ -962,7 +1186,11 @@ Events
 
 .. js:function:: afterRemoveUnit 
 
-	:param String unitId: id of the unit which is open in editor
+	:param String unitId: 
+
+	.. raw:: html 
+
+		id of the unit which is open in editor
 
 
 
@@ -1004,7 +1232,11 @@ Events
 
 .. js:function:: afterRenderUnit 
 
-	:param String unitId: id of the unit which is open in editor
+	:param String unitId: 
+
+	.. raw:: html 
+
+		id of the unit which is open in editor
 
 
 
@@ -1026,7 +1258,11 @@ Events
 
 .. js:function:: beforeInsertUnit 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1048,7 +1284,11 @@ Events
 
 .. js:function:: beforeMoveUnit 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1070,7 +1310,11 @@ Events
 
 .. js:function:: beforeRemoveUnit 
 
-	:param String unitId: id of the unit which is open in editor
+	:param String unitId: 
+
+	.. raw:: html 
+
+		id of the unit which is open in editor
 
 
 
@@ -1112,7 +1356,11 @@ Page is about to reload. You can cancel this reload/unit-replace by calling <a h
 
 .. js:function:: beforeRenderUnit 
 
-	:param String unitId: id of the unit which is open in editor
+	:param String unitId: 
+
+	.. raw:: html 
+
+		id of the unit which is open in editor
 
 
 
@@ -1134,7 +1382,11 @@ Page is about to reload. You can cancel this reload/unit-replace by calling <a h
 
 .. js:function:: formValueChange 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1156,7 +1408,11 @@ A form value has changed. You can prevent the reload/unitReplace by calling <a h
 
 .. js:function:: frameMouseEnter 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1178,7 +1434,11 @@ A form value has changed. You can prevent the reload/unitReplace by calling <a h
 
 .. js:function:: frameMouseOut 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1200,7 +1460,11 @@ A form value has changed. You can prevent the reload/unitReplace by calling <a h
 
 .. js:function:: resolutionChange 
 
-	:param Object config: A configuration Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		A configuration Object
 
 
 
@@ -1222,7 +1486,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: showEditor 
 
-	:param String unitId: id of the unit which is open in editor
+	:param String unitId: 
+
+	.. raw:: html 
+
+		id of the unit which is open in editor
 
 
 
@@ -1244,7 +1512,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: treeMouseEnter 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1266,7 +1538,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: treeMouseOut 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1288,7 +1564,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitDeselect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1310,7 +1590,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitFrameDeselect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1332,7 +1616,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitFrameSelect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1354,7 +1642,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitSelect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1376,7 +1668,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitTreeDeselect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1398,7 +1694,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: unitTreeSelect 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 
@@ -1420,7 +1720,11 @@ Fired after changing the resolution in the client
 
 .. js:function:: visualHelpersStateChange 
 
-	:param Object config: Config Object
+	:param Object config: 
+
+	.. raw:: html 
+
+		Config Object
 
 
 

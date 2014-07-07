@@ -4,7 +4,7 @@
 	},
 	"plugins": [],
 	"source": {
-		"include": ["tmp/rukzuk_repo/js/CMS/api/API.js"],
+		"include": ["stubs/js/API.js"],
 		"exclude": [],
 		"includePattern": ".+\\.js(doc)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
