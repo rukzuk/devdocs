@@ -6,3 +6,6 @@
 /build/.idea/
 /rukzuk_repo
 nix.iml
+*~
+*.tmp
+*.bak
