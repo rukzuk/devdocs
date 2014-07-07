@@ -137,7 +137,7 @@ TODO
 PHP API's
 #########
 
-* :doc:`Render API <php_render_api>`
+* :doc:`Render API <php_api/php_render_api>`
 
     * access parent(s) and child(ren)
     * access to other API's such as CSS API, Head API
@@ -147,8 +147,8 @@ PHP API's
 * ModuleInfo API
 
     * provides information about the module used in the current unit
-* :doc:`CSS API <php_css_api>`
-* :doc:`Head API <php_head_api>`
+* :doc:`CSS API <php_api/php_css_api>`
+* :doc:`Head API <php_api/php_head_api>`
 
 .. note::
 

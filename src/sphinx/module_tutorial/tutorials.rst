@@ -39,7 +39,7 @@ Your First Module
 #. Refresh the module repository by clicking the refresh button in the "Module Development" pop-up.
 #. Test your new module.
 
-:download:`Download Module Example <_static/downloads/mycompany_textfield.zip>`
+:ref:`Download Module Example <_static/downloads/mycompany_textfield.zip>`
 
 ###############
 Advanced Module
