@@ -44,7 +44,9 @@ function sphinx_create_docu(){
 
 function jsdoc_create_docu(){
     if command -v grunt >/dev/null; then
-        grunt jsdoc
+        # run jsdoc
+        node_modules/.bin/jsdoc -c ./config/jsdoc.json
+        # copy output
         jsdoc_file="build/cms/docs/CMS.api.API.html"
         destin="src/sphinx/module_tutorial/js_module_api.rst"
         if [ -f "$jsdoc_file" ]
