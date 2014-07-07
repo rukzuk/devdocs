@@ -1,0 +1,137 @@
+{% extends page_layout %}
+{% from "macros.twig" import namespace_link, class_link, method_link, hint_link %}
+{% block body_class 'class' %}
+{% block content_header %}
+
+=====================
+{{ class.shortname }}
+=====================
+{% endblock %}
+{% block content %}
+{% if class.shortdesc or class.longdesc %}
+{{ class.shortdesc|desc(class) }}
+{{ class.longdesc|desc(class) }}
+{% endif %}
+{% if constants %}
+
+---------
+Constants
+---------
+{{ block('constants') }}
+{% endif %}
+{% if properties %}
+
+----------
+Properties
+----------
+{{ block('properties') }}
+{% endif %}
+{% if methods %}
+
+{{ block('methods_details') }}
+{% endif %}
+{% endblock %}
+{% block class_signature -%}
+.. php:class:: {% if not class.interface and class.abstract %}abstract {% endif %} {{ class.categoryName }} {{ class.shortname }}
+{%- if class.parent %}
+extends {{ class_link(class.parent) }}
+{%- endif %}
+{%- if class.interfaces|length > 0 %}
+implements
+{% for interface in class.interfaces %}
+{{- class_link(interface) }}
+{%- if not loop.last %}, {% endif %}
+{%- endfor %}
+{%- endif %}
+{% endblock %}
+{% block method_signature -%}
+
+.. php:method:: {% if method.final %}final{% endif %}{% if method.abstract %}abstract{% endif %}{% if method.static %}static{% endif %}{% if method.public %}public{% endif %}{% if method.protected %}protected{% endif %}{% if method.private %}private{% endif %} {{ hint_link(method.hint) }} {{ method.name }} {{ block('method_parameters_signature') }}
+{%- endblock %}
+
+{% block method_parameters_signature -%}
+{%- from "macros.twig" import method_parameters_signature -%}
+{{ method_parameters_signature(method) }}
+{%- endblock %}
+
+{% block parameters %}
+{% for parameter in method.parameters %}
+	:param {% if parameter.hint %}{{ hint_link(parameter.hint) }}{% endif %} ${{ parameter.name }}: {{ parameter.shortdesc|desc(class) }}
+{% endfor %}{% endblock %}
+{% block return %}
+	:returns: {{ hint_link(method.hint) }} {{ method.hintDesc|desc(class) }}
+{% endblock %}
+
+{% block exceptions %}
+{% for exception in method.exceptions %}
+{{ class_link(exception[0]) }} {{ exception[1]|desc(class) }}
+{% endfor %}
+{% endblock %}
+
+{% block see %}
+<table>
+{% for tag in method.tags('see') %}
+<tr>
+<td>{{ tag[0] }}</td>
+<td>{{ tag[1:]|join(' ') }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+{% block constants %}
+<table>
+{% for constant in constants %}
+<tr>
+<td>{{ constant.name }}</td>
+<td class="last">
+<p><em>{{ constant.shortdesc|desc(class) }}</em></p>
+<p>{{ constant.longdesc|desc(class) }}</p>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+{% block properties %}
+<table>
+{% for property in properties %}
+<tr>
+<td class="type" id="property_{{ property.name }}">
+{% if property.static %}static{% endif %}
+{% if property.protected %}protected{% endif %}
+{{ hint_link(property.hint) }}
+</td>
+<td>${{ property.name }}</td>
+<td class="last">{{ property.shortdesc|desc(class) }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+{% block methods_details %}
+{% for method in methods %}
+{{ block('method') }}
+{% endfor %}
+{% endblock %}
+
+{% block method %}
+{% if method.class is not sameas(class) %}in {{ method_link(method, {}, false, true) }} {% endif %}
+{{ block('method_signature') }}
+
+	{{ method.shortdesc|desc(class) }}
+
+{% if method.parameters %}
+{{ block('parameters') }}{% endif %}{% if method.hintDesc or method.hint %}
+{{ block('return') }}
+{% endif %}
+{% if method.exceptions %}
+
+	**throws exceptions:** {{ block('exceptions') }}
+{% endif %}
+{% if method.tags('see') %}
+See also:
+
+{{ block('see') }}
+{% endif %}
+{% endblock %}

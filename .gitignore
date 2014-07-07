@@ -1,0 +1,8 @@
+/vendor/
+/build
+/node_modules/
+/rukzuk_repo
+.idea/
+/build/.idea/
+/rukzuk_repo
+Main.iml

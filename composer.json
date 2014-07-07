@@ -1,0 +1,14 @@
+{
+    "name": "rukzuk/module_development_documentation",
+    "authors": [
+        {
+            "name": "Christian Pergande",
+            "email": "christian.pergande@rukzuk.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+	"gooh/interface-distiller": "dev-master",
+    	"sami/sami": "1.4.*@dev"
+    }
+}

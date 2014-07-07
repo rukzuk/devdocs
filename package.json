@@ -1,0 +1,8 @@
+{
+  "name": "rukzuk",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "jsdoc": "git+https://github.com/jsdoc3/jsdoc.git#9555f6c43f8ced17e68a1c462442c9e08cb52df1"
+  }
+}

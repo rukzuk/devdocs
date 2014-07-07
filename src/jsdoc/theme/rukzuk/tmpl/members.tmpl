@@ -1,0 +1,26 @@
+<?js
+var data = obj;
+var self = this;
+?>
+.. js:function:: <?js if (data.type && data.type.names) {?><?js= self.partial('type.tmpl', data.type.names) ?><?js } ?> <?js= data.attribs + name + (data.signature ? data.signature : '') ?>
+
+    <?js= this.partial('details.tmpl', data) ?>
+
+
+<?js if (data.summary) { ?><?js= summary ?><?js } ?>
+<?js if (data.description) { ?><?js= data.description ?><?js } ?>
+
+<?js if (data.examples && examples.length) { ?>
+<?js= this.partial('examples.tmpl', examples) ?>
+<?js } ?>
+
+<?js if (data.fires && fires.length) { ?>
+""""""
+Fires:
+""""""
+<?js fires.forEach(function(f) { ?>* <?js= self.linkto(f) ?><?js }); ?><?js } ?>
+
+<?js if (data.examples && data.examples.length) { ?>
+<?js= this.partial('examples.tmpl', data.examples) ?>
+<?js } ?>
+

@@ -1,0 +1,17 @@
+{
+	"tags": {
+		"allowUnknownTags": true
+	},
+	"plugins": [],
+	"source": {
+		"include": ["tmp/rukzuk_repo/js/CMS/api/API.js"],
+		"exclude": [],
+		"includePattern": ".+\\.js(doc)?$",
+		"excludePattern": "(^|\\/|\\\\)_"
+	},
+	"opts": {
+		"template": "../src/jsdoc/theme/rukzuk",
+		"encoding": "utf8",
+		"destination": "build/cms/docs"
+	}
+}

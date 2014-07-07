@@ -1,0 +1,52 @@
+<?js
+    var props = obj;
+
+    /* sort subprops under their parent props (like opts.classname) */
+    var parentProp = null;
+    props.forEach(function(prop, i) {
+        if (!prop) { return; }
+
+        if( prop.description ){
+                    prop.description = prop.description.replace(/\n|\r/g, " ");
+                    prop.description = prop.description.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+                }
+        if ( parentProp && prop.name && prop.name.indexOf(parentProp.name + '.') === 0 ) {
+            prop.name = prop.name.substr(parentProp.name.length+1);
+            parentProp.subprops = parentProp.subprops || [];
+            parentProp.subprops.push(prop);
+            props[i] = null;
+        }
+        else {
+            parentProp = prop;
+        }
+    });
+
+    /* determine if we need extra columns, "attributes" and "default" */
+    props.hasAttributes = false;
+    props.hasDefault = false;
+    props.hasName = false;
+
+    props.forEach(function(prop) {
+        if (!prop) { return; }
+
+        if (prop.optional || prop.nullable) {
+            props.hasAttributes = true;
+        }
+
+        if (prop.name) {
+            props.hasName = true;
+        }
+
+        if (typeof prop.defaultvalue !== 'undefined') {
+            props.hasDefault = true;
+        }
+    });
+?>
+<?js
+    var self = this;
+    props.forEach(function(prop) {
+        if (!prop) { return; }
+?>
+<?js print("\t")?>:param <?js if (prop.type && prop.type.names) {?> <?js if (props.hasDefault) {?><?js if (typeof prop.defaultvalue !== 'undefined') { ?><?js= self.htmlsafe(prop.defaultvalue) ?><?js } ?><?js if (props.hasAttributes) {?><?js if (prop.optional) { ?>optional><?js } ?><?js if (prop.nullable) { ?>nullable<?js } ?><?js } ?> <?js= self.partial('type.tmpl', prop.type.names) ?><?js } ?> <?js if (props.hasName) {?><?js= prop.name ?><?js } ?>: <?js= prop.description ?><?js } ?>
+<?js if (prop.subprops) { ?><?js= self.partial('properties.tmpl', prop.subprops) ?><?js } ?>
+<?js }); ?>
