@@ -1,8 +1,8 @@
-rukzuk Module Development Documentation
-====================
+# rukzuk Development Documentation
 
-This repo contains tutorials and API docs which are available at http://developers.rukzuk.com/
+This repo contains tutorials and API docs which are available at http://rukzuk.github.io/devdocs
 
-#### Install:
+## Build
 
     ./install/run.sh
+
