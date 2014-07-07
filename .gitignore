@@ -5,7 +5,7 @@
 .idea/
 /build/.idea/
 /rukzuk_repo
-nix.iml
+devdocs.iml
 *~
 *.tmp
 *.bak
