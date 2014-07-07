@@ -38,7 +38,7 @@ else
 fi
 
 # TODO: use virtualenv and add requirements to the repo?
-sudo pip install sphinx sphinx_rtd_theme
+sudo pip install sphinx sphinx_rtd_theme sphinxcontrib-phpdomain
 
 cd install
 echo "------------ done"
