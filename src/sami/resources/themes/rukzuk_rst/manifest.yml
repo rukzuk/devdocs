@@ -2,20 +2,6 @@ name:   rukzuk_rst
 parent: enhanced
 
 static:
-    'css/rukzuk.css':            'css/rukzuk.css'
-    'css/panel_rukzuk.css':      'css/panel_rukzuk.css'
-    'css/layout.css':            'css/layout.css'
-    'img/rz_background.png':     'img/rz_background.png'
-    'img/arrows.png':            'img/arrows.png'
-    'img/loader.gif':            'img/loader.gif'
-    'img/tree_bg.png':           'img/tree_bg.png'
-    'fonts/fontawesome-webfont.eot': 'fonts/fontawesome-webfont.eot'
-    'fonts/fontawesome-webfont.svg': 'fonts/fontawesome-webfont.svg'
-    'fonts/fontawesome-webfont.ttf': 'fonts/fontawesome-webfont.ttf'
-    'fonts/fontawesome-webfont.woff': 'fonts/fontawesome-webfont.woff'
-    'js/jquery-1.3.2.min.js':  'js/jquery-1.3.2.min.js'
-    'js/searchdoc.js':         'js/searchdoc.js'
-    'js/permalink.js':         'js/permalink.js'
 
 global:
     'layout/panel.twig':       'panel.html'
@@ -23,14 +9,9 @@ global:
     'layout/base.twig':        'layout/base.html'
     'layout/page.twig':        'layout/page.html'
     'layout/layout.twig':      'layout/layout.html'
-    'js/tree.twig':            'js/tree.js'
-    'js/search_index.twig':    'js/search_index.js'
-    'pages/opensearch.twig':   'opensearch.xml'
     'pages/index.twig':        'doc-index.html'
-    'pages/namespaces.twig':   'namespaces.html'
     'pages/interfaces.twig':   'interfaces.html'
     'pages/classes.twig':      'classes.html'
-    'pages/traits.twig':       'traits.html'
 
 namespace:
     'namespace.twig':        '%s/namespace-frame.html'
