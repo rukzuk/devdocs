@@ -1,9 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+# Install deps
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+ROOT="${DIR}/.."
 
 echo "------------ start npm package installation"
 cd ..
 if command -v npm >/dev/null; then
-    file="package.json"
+    file="$ROOT/package.json"
     if [ -f "$file" ]
     then
         echo "------------ install packages"
@@ -23,7 +29,7 @@ else
     echo "------------ Installed node, npm, grunt"
 
     if command -v npm >/dev/null; then
-        file="package.json"
+        file="$ROOT/package.json"
         if [ -f "$file" ]; then
             echo "------------ install packages"
             npm install
@@ -40,16 +46,8 @@ fi
 # TODO: use virtualenv and add requirements to the repo?
 sudo pip install sphinx sphinx_rtd_theme sphinxcontrib-phpdomain
 
-cd install
 echo "------------ done"
 
-file="gendoc.sh"
-if [ -f "$file" ]
-then
-    ./gendoc.sh
-else
-    echo "------------ $file not found"
-    exit 1
-fi
+echo "------------ generate doc"
+${DIR}/gendoc.sh
 
-cd ..
