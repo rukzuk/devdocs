@@ -9,10 +9,15 @@
 // config
 //
 
+if (!isset($argv[1]) || !is_dir($argv[1]) || !isset($argv[2]) || !is_dir($argv[2])) {
+  echo $argv[0]." <rukzuk checkout root> <stubs target>\n";
+  exit(1);
+}
+
 // folder config
 $project_root = __DIR__.'/../../../';
-$lib_path = $project_root.'tmp/rukzuk_repo/cms/server/library/';
-$stubs_path = $project_root.'build/stubs/';
+$lib_path = $argv[1].'/cms/server/library/';
+$stubs_path = $argv[2];
 
 // Full class names (including namespaces)
 $api_classes = array(

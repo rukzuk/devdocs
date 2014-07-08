@@ -18,7 +18,7 @@ else
     apt-get install -y python-software-properties
     add-apt-repository -y ppa:chris-lea/node.js
     apt-get update
-    apt-get -y install nodejs ruby1.9.1
+    apt-get -y install nodejs
     npm -g install grunt-cli
     echo "------------ Installed node, npm, grunt"
 
@@ -36,17 +36,12 @@ else
         exit 1
     fi
 fi
+
+# TODO: use virtualenv and add requirements to the repo?
+sudo pip install sphinx sphinx_rtd_theme sphinxcontrib-phpdomain
+
 cd install
 echo "------------ done"
-
-file="genstubs.sh"
-if [ -f "$file" ]
-then
-    ./genstubs.sh
-else
-    echo "------------ $file not found"
-    exit 1
-fi
 
 file="gendoc.sh"
 if [ -f "$file" ]
@@ -58,8 +53,3 @@ else
 fi
 
 cd ..
-
-echo "------------ removing tmp repo folder"
-rm -rf tmp
-echo "------------ removing stub folder"
-rm -rf build/stubs

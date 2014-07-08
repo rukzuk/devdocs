@@ -1,4 +1,5 @@
 name:   rukzuk_rst
+<<<<<<< HEAD
 parent: enhanced
 
 static:
@@ -16,6 +17,8 @@ global:
 namespace:
     'namespace.twig':        '%s/namespace-frame.html'
     'pages/namespace.twig':  '%s.html'
+=======
+>>>>>>> remotes/origin/master
 
 class:
-    'pages/class.twig':      '%s.html'
+    'pages/class.twig':      '%s.rst'

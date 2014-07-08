@@ -9,7 +9,7 @@ function sami_create_docu() {
     then
         php vendor/bin/sami.php update "$sami_config_file"
 
-		sami_files=( "build/php/Render/APIs/APIv1/CSSAPI.html" "build/php/Render/APIs/APIv1/HeadAPI.html" "build/php/Render/APIs/APIv1/MediaIcon.html" "build/php/Render/APIs/APIv1/MediaImage.html" "build/php/Render/APIs/APIv1/MediaItem.html" "build/php/Render/APIs/APIv1/Navigation.html" "build/php/Render/APIs/APIv1/Page.html" "build/php/Render/APIs/APIv1/RenderAPI.html" "build/php/Render/APIs/RootAPIv1/RootCssAPI.html" "build/php/Render/APIs/RootAPIv1/RootRenderAPI.html" )
+		sami_files=( "build/php/Render/APIs/APIv1/CSSAPI.rst" "build/php/Render/APIs/APIv1/HeadAPI.rst" "build/php/Render/APIs/APIv1/MediaIcon.rst" "build/php/Render/APIs/APIv1/MediaImage.rst" "build/php/Render/APIs/APIv1/MediaItem.rst" "build/php/Render/APIs/APIv1/Navigation.rst" "build/php/Render/APIs/APIv1/Page.rst" "build/php/Render/APIs/APIv1/RenderAPI.rst" "build/php/Render/APIs/RootAPIv1/RootCssAPI.rst" "build/php/Render/APIs/RootAPIv1/RootRenderAPI.rst" )
 		destin=( "src/sphinx/module_tutorial/php_api/php_css_api.rst" "src/sphinx/module_tutorial/php_api/php_head_api.rst" "src/sphinx/module_tutorial/php_api/php_mediaicon_api.rst" "src/sphinx/module_tutorial/php_api/php_mediaimage_api.rst" "src/sphinx/module_tutorial/php_api/php_mediaitem_api.rst" "src/sphinx/module_tutorial/php_api/php_navigation_api.rst" "src/sphinx/module_tutorial/php_api/php_page_api.rst" "src/sphinx/module_tutorial/php_api/php_render_api.rst" "src/sphinx/module_tutorial/php_api/php_root_css_api.rst" "src/sphinx/module_tutorial/php_api/php_root_render_api.rst" )
 
 		for (( i = 0 ; i < ${#sami_files[@]} ; i++ ))
@@ -44,7 +44,9 @@ function sphinx_create_docu(){
 
 function jsdoc_create_docu(){
     if command -v grunt >/dev/null; then
-        grunt jsdoc
+        # run jsdoc
+        node_modules/.bin/jsdoc -c ./config/jsdoc.json
+        # copy output
         jsdoc_file="build/cms/docs/CMS.api.API.html"
         destin="src/sphinx/module_tutorial/js_module_api.rst"
         if [ -f "$jsdoc_file" ]
@@ -68,7 +70,7 @@ function compress_stubs(){
         if [ ! -d "$build_download_directory" ]; then
 			mkdir -p "$build_download_directory"
         fi
-        zip -r build/html/_downloads/stubs.zip build/stubs/
+        zip -r build/html/_downloads/stubs.zip stubs/php
     else
         echo "------------ command zip not found"
         exit 1
