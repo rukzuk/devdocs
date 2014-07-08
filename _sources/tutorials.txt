@@ -39,7 +39,7 @@ Your First Module
 #. Refresh the module repository by clicking the refresh button in the "Module Development" pop-up.
 #. Test your new module.
 
-`Download Module Example <https://github.com/rukzuk/module-examples/archive/master.zip>`_
+`Download Module Example <https://github.com/rukzuk/module-examples/archive/your-first-module.zip>`_
 
 ###############
 Advanced Module
