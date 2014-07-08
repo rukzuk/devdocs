@@ -27,7 +27,7 @@ function clone_rukzuk_repo(){
 
 function create_php_stubs() {
     if [ -f "$createStubs" ]; then
-        echo "------------ run createStubs "
+        echo "------------ run createStubs ${directory} ${target}/php"
         php "$createStubs" "${directory}" "${target}/php"
     else
         echo "------------ $createStubs not found"

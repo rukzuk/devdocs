@@ -1,24 +1,4 @@
 name:   rukzuk_rst
-<<<<<<< HEAD
-parent: enhanced
-
-static:
-
-global:
-    'layout/panel.twig':       'panel.html'
-    'layout/frame.twig':       'frame.html'
-    'layout/base.twig':        'layout/base.html'
-    'layout/page.twig':        'layout/page.html'
-    'layout/layout.twig':      'layout/layout.html'
-    'pages/index.twig':        'doc-index.html'
-    'pages/interfaces.twig':   'interfaces.html'
-    'pages/classes.twig':      'classes.html'
-
-namespace:
-    'namespace.twig':        '%s/namespace-frame.html'
-    'pages/namespace.twig':  '%s.html'
-=======
->>>>>>> remotes/origin/master
 
 class:
     'pages/class.twig':      '%s.rst'
