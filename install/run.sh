@@ -4,9 +4,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ROOT="${DIR}/.."
-
-cd "${ROOT}"
+ROOT="$( cd "${DIR}/.." && pwd)"
 
 echo "------------ start npm package installation"
 if ! command -v npm >/dev/null; then
@@ -20,12 +18,12 @@ if ! command -v npm >/dev/null; then
 fi
 
 if command -v npm >/dev/null; then
-    file="$ROOT/package.json"
-    if [ -f "$file" ]; then
+    file="${ROOT}/package.json"
+    if [ -f "${file}" ]; then
         echo "------------ install packages"
         npm install
     else
-        echo "------------ $file not found"
+        echo "------------ ${file} not found"
         exit 1
     fi
 else
@@ -47,7 +45,7 @@ fi
 echo "------------ done"
 
 echo "------------ start composer package installation"
-if [ !-f "${ROOT}/composer.phar" ]; then
+if [ ! -f "${ROOT}/composer.phar" ]; then
     echo "------------ composer.phar not found"
     exit 3
 fi

@@ -4,13 +4,13 @@
 	},
 	"plugins": [],
 	"source": {
-		"include": ["../stubs/js/API.js"],
+		"include": ["stubs/js/API.js"],
 		"exclude": [],
 		"includePattern": ".+\\.js(doc)?$",
 		"excludePattern": "(^|\\/|\\\\)_"
 	},
 	"opts": {
-		"template": "../src/jsdoc/theme/rukzuk",
+		"template": "src/jsdoc/theme/rukzuk",
 		"encoding": "utf8",
 		"destination": "build/cms/docs"
 	}
