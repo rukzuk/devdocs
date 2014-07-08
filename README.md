@@ -4,7 +4,7 @@ This repo contains tutorials and API docs which are available at http://develope
 
 ## Build
 
-## install all required dependencies and build
+### install all required dependencies and build
 
     ./install/run.sh
 
