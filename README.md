@@ -1,13 +1,15 @@
 # rukzuk Development Documentation
 
-This repo contains tutorials and API docs which are available at http://rukzuk.github.io/devdocs
+This repo contains tutorials and API docs which are available at http://developers.rukzuk.com
 
 ## Build
 
-    # install all required dependencies and build
+## install all required dependencies and build
+
     ./install/run.sh
 
 
-    # build only
+### build only
+
     ./install/gendoc.sh
 
