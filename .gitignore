@@ -1,4 +1,7 @@
 /vendor/
+composer.lock
+composer.phar
+/stubs/
 /build
 /node_modules/
 /rukzuk_repo
@@ -9,3 +12,4 @@ devdocs.iml
 *~
 *.tmp
 *.bak
+*.pyc
