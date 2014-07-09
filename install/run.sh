@@ -42,7 +42,6 @@ if ! command -v curl >/dev/null; then
     echo "------------ command curl not found"
     echo '------------ install curl'
     sudo apt-get install -y curl
-    echo "------------ Installed node, npm, grunt"
 fi
 
 if [ ! -f "${ROOT}/composer.phar" ]; then

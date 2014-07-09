@@ -2,7 +2,6 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT="$( cd "${DIR}/.." && pwd )"
-stubsDir="$(cd "${ROOT}/stubs" && pwd )"
 
 function sami_create_docu() {
     echo "------------ generating php api documenation from stubs"
@@ -59,12 +58,13 @@ function jsdoc_create_docu(){
 }
 
 function fetch_stubs() {
-	echo "------------ Clear existsing stubs in ${ROOT}/stubs"
-    rm -rf ${stubsDir} 2>&1 >/dev/null
-    echo "------------ Create directory ${ROOT}/stubs"
-    mkdir "${ROOT}/stubs" 2>&1 >/dev/null
+	stubDir="${ROOT}/stubs";
+	echo "------------ Clear existsing stubs in ${stubDir}"
+    rm -rf ${stubDir} 2>&1 >/dev/null
+    echo "------------ Create directory ${stubDir}"
+    mkdir "${stubDir}"
     echo "------------ Start fetching module api stubs from github"
-    git clone --depth 1 https://github.com/rukzuk/module-api-stubs.git ${ROOT}"/stubs"
+    git clone --depth 1 https://github.com/rukzuk/module-api-stubs.git ${stubDir}
     echo "------------ Done"
 }
 
