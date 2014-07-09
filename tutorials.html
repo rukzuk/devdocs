@@ -325,25 +325,24 @@
 <p>In your <tt class="docutils literal"><span class="pre">custom.json</span></tt> you need to include the above JavaScript file:</p>
 <blockquote>
 <div><div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
-                <span class="nt">&quot;assets&quot;</span><span class="p">:{</span>
-                        <span class="nt">&quot;js&quot;</span><span class="p">:[</span>
-                                <span class="p">{</span>
-                                        <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;mycompany.js&quot;</span><span class="p">,</span>
-                                        <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
-                                        <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;live&quot;</span>
-                                <span class="p">},</span>
-                                <span class="p">{</span>
-                                        <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;notlive\/editMode.js&quot;</span><span class="p">,</span>
-                                        <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
-                                        <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;edit&quot;</span>
-                                <span class="p">}</span>
-                        <span class="p">]</span>
-                <span class="p">}</span>
+        <span class="nt">&quot;assets&quot;</span><span class="p">:{</span>
+                <span class="nt">&quot;js&quot;</span><span class="p">:[</span>
+                        <span class="p">{</span>
+                                <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;mycompany.js&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;live&quot;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                                <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;notlive\/editMode.js&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+                                <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;edit&quot;</span>
+                        <span class="p">}</span>
+                <span class="p">]</span>
+        <span class="p">}</span>
         <span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/access-unit-data.zip">Download Access Unit Data Module Example</a></p>
 </div>
 <div class="section" id="in-javascript-editmode-js">
 <h3>In JavaScript <tt class="docutils literal"><span class="pre">editMode.js</span></tt><a class="headerlink" href="#in-javascript-editmode-js" title="Permalink to this headline">¶</a></h3>
@@ -376,6 +375,7 @@
 <p class="first admonition-title">Note</p>
 <p class="last">The <tt class="docutils literal"><span class="pre">CMS</span></tt> API is globally available throughout the rukzuk web application while in edit mode. That means the custom module will not be able to consume information or data from the <tt class="docutils literal"><span class="pre">CMS</span></tt> API in an live environment (e.g. live hosting).</p>
 </div>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/access-unit-data.zip">Download Access Unit Data Module Example</a></p>
 </div>
 </div>
 <div class="section" id="listening-to-events-in-edit-mode">
