@@ -59,7 +59,7 @@ HeadAPI
 
 
 
-.. php:method:: public string getColorById (string $colorId)
+.. php:method:: public string getColorById (string colorId)
 
 	Convert a color id to a rgba() value
 
@@ -75,7 +75,7 @@ HeadAPI
 	:returns: array (color-id => color-value)
 
 
-.. php:method:: public Render\APIs\APIv1\MediaItem MediaItem getMediaItem (string $mediaId)
+.. php:method:: public Render\APIs\APIv1\MediaItem MediaItem getMediaItem (string mediaId)
 
 	Returns the media item with the given media id or null if the image does not exists.
 

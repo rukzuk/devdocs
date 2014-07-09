@@ -141,7 +141,7 @@
 <h1>CSSAPI<a class="headerlink" href="#cssapi" title="Permalink to this headline">¶</a></h1>
 <dl class="method">
 <dt>
-<tt class="descname">public RenderAPIsAPIv1Unit Unit|null getParentUnit (RenderAPIsAPIv1RenderUnit Unit $unit)</tt></dt>
+<tt class="descname">public RenderAPIsAPIv1Unit Unit|null getParentUnit (RenderAPIsAPIv1RenderUnit Unit unit)</tt></dt>
 <dd><p>Returns the parent unit for the given unit</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -161,7 +161,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public mixed getFormValue (RenderAPIsAPIv1RenderUnit Unit $unit, mixed $key, mixed $fallbackValue = NULL)</tt></dt>
+<tt class="descname">public mixed getFormValue (RenderAPIsAPIv1RenderUnit Unit unit, mixed key, mixed fallbackValue = NULL)</tt></dt>
 <dd><p>Returns the form value of the given unit</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -183,7 +183,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public RenderUnit Unit[] getChildren (RenderAPIsAPIv1RenderUnit Unit $unit)</tt></dt>
+<tt class="descname">public RenderUnit Unit[] getChildren (RenderAPIsAPIv1RenderUnit Unit unit)</tt></dt>
 <dd><p>Returns a list of all children units of the given unit</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -203,7 +203,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public null|RenderUnit Unit getUnitById (RenderAPIsAPIv1$unitId $unitId $unitId)</tt></dt>
+<tt class="descname">public null|RenderUnit Unit getUnitById (RenderAPIsAPIv1$unitId $unitId unitId)</tt></dt>
 <dd><p>Returns the Unit object for a given unitId, null if not found</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -223,7 +223,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public null|RenderModuleInfo ModuleInfo getModuleInfo (RenderAPIsAPIv1RenderUnit Unit $unit)</tt></dt>
+<tt class="descname">public null|RenderModuleInfo ModuleInfo getModuleInfo (RenderAPIsAPIv1RenderUnit Unit unit)</tt></dt>
 <dd><p>Returns the module info object for the given unit, null if not found</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -243,7 +243,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public  getUnitCache (RenderAPIsAPIv1RenderUnit Unit $unit, string $key)</tt></dt>
+<tt class="descname">public  getUnitCache (RenderAPIsAPIv1RenderUnit Unit unit, string key)</tt></dt>
 <dd><p>Get values from the permanent unit cache</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -262,7 +262,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public  setUnitCache (RenderAPIsAPIv1RenderUnit Unit $unit, string $key, array $value)</tt></dt>
+<tt class="descname">public  setUnitCache (RenderAPIsAPIv1RenderUnit Unit unit, string key, array value)</tt></dt>
 <dd><p>Set values in the permanent unit cache</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -380,7 +380,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public string getColorById (string $colorId)</tt></dt>
+<tt class="descname">public string getColorById (string colorId)</tt></dt>
 <dd><p>Convert a color id to a rgba() value</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -414,7 +414,7 @@
 
 <dl class="method">
 <dt>
-<tt class="descname">public RenderAPIsAPIv1MediaItem MediaItem getMediaItem (string $mediaId)</tt></dt>
+<tt class="descname">public RenderAPIsAPIv1MediaItem MediaItem getMediaItem (string mediaId)</tt></dt>
 <dd><p>Returns the media item with the given media id or null if the image does not exists.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

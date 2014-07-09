@@ -3,7 +3,7 @@
 CSSAPI
 =====================
         
-.. php:method:: public Render\APIs\APIv1\Unit Unit|null getParentUnit (Render\APIs\APIv1\Render\Unit Unit $unit)
+.. php:method:: public Render\APIs\APIv1\Unit Unit|null getParentUnit (Render\APIs\APIv1\Render\Unit Unit unit)
 
 	Returns the parent unit for the given unit
 
@@ -12,7 +12,7 @@ CSSAPI
 
 
 
-.. php:method:: public mixed getFormValue (Render\APIs\APIv1\Render\Unit Unit $unit, mixed $key, mixed $fallbackValue = NULL)
+.. php:method:: public mixed getFormValue (Render\APIs\APIv1\Render\Unit Unit unit, mixed key, mixed fallbackValue = NULL)
 
 	Returns the form value of the given unit
 
@@ -23,7 +23,7 @@ CSSAPI
 
 
 
-.. php:method:: public Render\Unit Unit[] getChildren (Render\APIs\APIv1\Render\Unit Unit $unit)
+.. php:method:: public Render\Unit Unit[] getChildren (Render\APIs\APIv1\Render\Unit Unit unit)
 
 	Returns a list of all children units of the given unit
 
@@ -32,7 +32,7 @@ CSSAPI
 
 
 
-.. php:method:: public null|Render\Unit Unit getUnitById (Render\APIs\APIv1\$unitId $unitId $unitId)
+.. php:method:: public null|Render\Unit Unit getUnitById (Render\APIs\APIv1\$unitId $unitId unitId)
 
 	Returns the Unit object for a given unitId, null if not found
 
@@ -42,7 +42,7 @@ CSSAPI
 
 
 
-.. php:method:: public null|Render\ModuleInfo ModuleInfo getModuleInfo (Render\APIs\APIv1\Render\Unit Unit $unit)
+.. php:method:: public null|Render\ModuleInfo ModuleInfo getModuleInfo (Render\APIs\APIv1\Render\Unit Unit unit)
 
 	Returns the module info object for the given unit, null if not found
 
@@ -52,7 +52,7 @@ CSSAPI
 
 
 
-.. php:method:: public  getUnitCache (Render\APIs\APIv1\Render\Unit Unit $unit, string $key)
+.. php:method:: public  getUnitCache (Render\APIs\APIv1\Render\Unit Unit unit, string key)
 
 	Get values from the permanent unit cache
 
@@ -64,7 +64,7 @@ CSSAPI
 
 
 
-.. php:method:: public  setUnitCache (Render\APIs\APIv1\Render\Unit Unit $unit, string $key, array $value)
+.. php:method:: public  setUnitCache (Render\APIs\APIv1\Render\Unit Unit unit, string key, array value)
 
 	Set values in the permanent unit cache
 
@@ -133,7 +133,7 @@ CSSAPI
 
 
 
-.. php:method:: public string getColorById (string $colorId)
+.. php:method:: public string getColorById (string colorId)
 
 	Convert a color id to a rgba() value
 
@@ -149,7 +149,7 @@ CSSAPI
 	:returns: array (color-id => color-value)
 
 
-.. php:method:: public Render\APIs\APIv1\MediaItem MediaItem getMediaItem (string $mediaId)
+.. php:method:: public Render\APIs\APIv1\MediaItem MediaItem getMediaItem (string mediaId)
 
 	Returns the media item with the given media id or null if the image does not exists.
 

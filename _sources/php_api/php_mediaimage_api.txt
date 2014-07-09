@@ -46,7 +46,7 @@ MediaImage
 
 
 
-.. php:method:: public  resizeScale ($maxWidth = NULL, $maxHeight = NULL)
+.. php:method:: public  resizeScale (maxWidth = NULL, maxHeight = NULL)
 
 	
 
@@ -56,7 +56,7 @@ MediaImage
 	:param  $maxHeight: 
 
 
-.. php:method:: public  resizeStretch ($width, $height)
+.. php:method:: public  resizeStretch (width, height)
 
 	
 
@@ -66,7 +66,7 @@ MediaImage
 	:param  $height: 
 
 
-.. php:method:: public  resizeCenter ($width, $height)
+.. php:method:: public  resizeCenter (width, height)
 
 	
 
@@ -76,7 +76,7 @@ MediaImage
 	:param  $height: 
 
 
-.. php:method:: public  resizeBorder ($width, $height)
+.. php:method:: public  resizeBorder (width, height)
 
 	
 
@@ -86,7 +86,7 @@ MediaImage
 	:param  $height: 
 
 
-.. php:method:: public Render\APIs\APIv1\$this $this crop (int $top, int $left, int $width, int $height)
+.. php:method:: public Render\APIs\APIv1\$this $this crop (int top, int left, int width, int height)
 
 	Crops the Image object.
 
@@ -102,7 +102,7 @@ MediaImage
 
 
 
-.. php:method:: public Render\APIs\APIv1\$this $this setQuality (int $quality)
+.. php:method:: public Render\APIs\APIv1\$this $this setQuality (int quality)
 
 	Sets the image quality (if supported by the mime type)
 
@@ -112,7 +112,7 @@ MediaImage
 
 
 
-.. php:method:: public Render\APIs\APIv1\$this $this setInterlaced (bool|null $interlaced)
+.. php:method:: public Render\APIs\APIv1\$this $this setInterlaced (bool|null interlaced)
 
 	Sets the interlacing mode
 

@@ -11,7 +11,7 @@ Navigation
 
 
 
-.. php:method:: public array getChildrenIds (string|null $pageId)
+.. php:method:: public array getChildrenIds (string|null pageId)
 
 	Returns the page ids of the children for the given page id.
 
@@ -21,7 +21,7 @@ Navigation
 
 
 
-.. php:method:: public bool pageExists (Render\APIs\APIv1\$pageId $pageId $pageId)
+.. php:method:: public bool pageExists (Render\APIs\APIv1\$pageId $pageId pageId)
 
 	Returns TRUE if the page specified by $pageId exists; FALSE otherwise.
 
@@ -31,7 +31,7 @@ Navigation
 
 
 
-.. php:method:: public Render\APIs\APIv1\Page Page getPage (Render\APIs\APIv1\$pageId $pageId $pageId)
+.. php:method:: public Render\APIs\APIv1\Page Page getPage (Render\APIs\APIv1\$pageId $pageId pageId)
 
 	Returns an \Render\APIs\APIv1\Page object
 
@@ -41,7 +41,7 @@ Navigation
 
 
 
-.. php:method:: public array getNavigatorIds (Render\APIs\APIv1\$pageId $pageId $pageId)
+.. php:method:: public array getNavigatorIds (Render\APIs\APIv1\$pageId $pageId pageId)
 
 	Returns an array of all parent ids for the given page id.
 
