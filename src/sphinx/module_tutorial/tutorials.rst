@@ -164,24 +164,21 @@ In your ``custom.json`` you need to include the above JavaScript file:
    .. code-block:: json
 
         {
-			"assets":{
-				"js":[
-					{
-						"file":"mycompany.js",
-						"type":"module",
-						"mode":"live"
-					},
-					{
-						"file":"notlive\/editMode.js",
-						"type":"module",
-						"mode":"edit"
-					}
-				]
-			}
+		"assets":{
+			"js":[
+				{
+					"file":"mycompany.js",
+					"type":"module",
+					"mode":"live"
+				},
+				{
+					"file":"notlive\/editMode.js",
+					"type":"module",
+					"mode":"edit"
+				}
+			]
 		}
-
-
-`Download Access Unit Data Module Example <https://github.com/rukzuk/module-examples/archive/access-unit-data.zip>`_
+		}
 
 
 =============================
@@ -214,6 +211,8 @@ All declared unit data (see module "edit mode" editor) can be accessed by the fo
 
     The ``CMS`` API is globally available throughout the rukzuk web application while in edit mode. That means the custom module will not be able to consume information or data from the ``CMS`` API in an live environment (e.g. live hosting).
 
+
+`Download Access Unit Data Module Example <https://github.com/rukzuk/module-examples/archive/access-unit-data.zip>`_
 
 ################################
 Listening to Events in Edit Mode
