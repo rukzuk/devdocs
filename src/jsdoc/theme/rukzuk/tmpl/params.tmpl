@@ -5,9 +5,8 @@
     params.forEach(function(param, i) {
         if (!param) { return; }
         if( param.description ){
+            param.description = param.description.replace(/CMS\.api\.API\.event\:/g, "http\:\/\/developers\.rukzuk\.com\/js_module_api\.html\#");
             param.description = param.description.replace(/\n|\r/g, " ");
-            //param.description = param.description.replace(/ /g, "");
-            param.description = param.description.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
         }
         if ( parentParam && param.name && param.name.indexOf(parentParam.name + '.') === 0 ) {
             param.name = param.name.substr(parentParam.name.length+1);
