@@ -43,7 +43,7 @@ Page
 
 
 
-.. php:method:: public string getNavigationTitle (bool $useTitleAsDefault = true)
+.. php:method:: public string getNavigationTitle (bool useTitleAsDefault = true)
 
 	Returns the title of the page that is shown in the navigation bar.
 
@@ -76,7 +76,7 @@ Page
 
 
 
-.. php:method:: public mixed|null getGlobal (string $name, int|null $index = NULL)
+.. php:method:: public mixed|null getGlobal (string name, int|null index = NULL)
 
 	Returns the global value for the given variable name.
 

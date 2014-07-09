@@ -32,9 +32,9 @@
     {% if hints %}
         {%- for hint in hints %}
             {%- if hint.class %}
-                {{- _self.class_link(hint.name) }}
+                {{- _self.class_link(hint.name)|raw }}
             {%- elseif hint.name %}
-                {{- abbr_class(hint.name) }}
+                {{- abbr_class(hint.name)|raw }}
             {%- endif %}
             {%- if hint.array %}[]{% endif %}
             {%- if not loop.last %}|{% endif %}
@@ -43,7 +43,7 @@
 {%- endmacro %}
 
 {% macro abbr_class(class, absolute) -%}
-    {{ class }} {{ class.shortname }}
+    {{ class }} {{ class.shortname|raw }}
 {%- endmacro %}
 
 {% macro method_parameters_signature(method) -%}
@@ -51,8 +51,8 @@
     (
         {%- for parameter in method.parameters %}
             {%- if parameter.hashint %}{{ hint_link(parameter.hint) }} {% endif -%}
-            ${{ parameter.name }}
-            {%- if parameter.default %} = {{ parameter.default }}{% endif %}
+            {{ parameter.name }}
+            {%- if parameter.default %} = {{ parameter.default|raw }}{% endif %}
             {%- if not loop.last %}, {% endif %}
         {%- endfor -%}
     )
