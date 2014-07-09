@@ -85,6 +85,9 @@ Advanced Module
         }
 
 
+`Download Advanced Module Example <https://github.com/rukzuk/module-examples/archive/advanced-module.zip>`_
+
+
 .. _module-user-interface:
 
 #####################
@@ -155,6 +158,32 @@ All declared unit data (see :ref:`Module User Interface <module-user-interface>`
 
     The module can access unit information or data in edit mode as well as in an live environment.
 
+
+In your ``custom.json`` you need to include the above JavaScript file:
+
+   .. code-block:: json
+
+        {
+			"assets":{
+				"js":[
+					{
+						"file":"mycompany.js",
+						"type":"module",
+						"mode":"live"
+					},
+					{
+						"file":"notlive\/editMode.js",
+						"type":"module",
+						"mode":"edit"
+					}
+				]
+			}
+		}
+
+
+`Download Access Unit Data Module Example <https://github.com/rukzuk/module-examples/archive/access-unit-data.zip>`_
+
+
 =============================
 In JavaScript ``editMode.js``
 =============================
@@ -219,6 +248,9 @@ Please have a look at the :doc:`JS Module API <js_module_api>` for all available
     Instead of a complete page reload only the DOM nodes of a module get replaced when the user changes the form values in edit mode. So you have to re-attach listeners on DOM elements on the ``afterRenderUnit`` event. If you set your listeners in the ``initUnit`` method, the ``JsModule`` helper takes care about that.
 
 
+`Download Listening Events Module Example <https://github.com/rukzuk/module-examples/archive/listening-to-events.zip>`_
+
+
 ######################
 Dynamic CSS Generation
 ######################
@@ -250,6 +282,10 @@ It also provides a little API e.g. for resolving colors or image URLs.
     The variable name of form fields which should trigger CSS re-generation must begin with "css".
 
 Please refer to the `AbsurdJS documentation <http://absurdjs.com/pages/css-preprocessing/basics/>`_ for further syntax details.
+
+
+`Download Dynamic CSS Generation Module Example <https://github.com/rukzuk/module-examples/archive/dynamic-css-generation.zip>`_
+
 
 .. _upload-via-ftp:
 

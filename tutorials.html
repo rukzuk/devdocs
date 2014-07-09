@@ -246,6 +246,7 @@
 </div>
 </li>
 </ol>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/advanced-module.zip">Download Advanced Module Example</a></p>
 </div>
 <div class="section" id="module-user-interface">
 <span id="id2"></span><h2>Module User Interface<a class="headerlink" href="#module-user-interface" title="Permalink to this headline">¶</a></h2>
@@ -321,6 +322,28 @@
 <p class="first admonition-title">Note</p>
 <p class="last">The module can access unit information or data in edit mode as well as in an live environment.</p>
 </div>
+<p>In your <tt class="docutils literal"><span class="pre">custom.json</span></tt> you need to include the above JavaScript file:</p>
+<blockquote>
+<div><div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+                <span class="nt">&quot;assets&quot;</span><span class="p">:{</span>
+                        <span class="nt">&quot;js&quot;</span><span class="p">:[</span>
+                                <span class="p">{</span>
+                                        <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;mycompany.js&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;live&quot;</span>
+                                <span class="p">},</span>
+                                <span class="p">{</span>
+                                        <span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="s2">&quot;notlive\/editMode.js&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;module&quot;</span><span class="p">,</span>
+                                        <span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="s2">&quot;edit&quot;</span>
+                                <span class="p">}</span>
+                        <span class="p">]</span>
+                <span class="p">}</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/access-unit-data.zip">Download Access Unit Data Module Example</a></p>
 </div>
 <div class="section" id="in-javascript-editmode-js">
 <h3>In JavaScript <tt class="docutils literal"><span class="pre">editMode.js</span></tt><a class="headerlink" href="#in-javascript-editmode-js" title="Permalink to this headline">¶</a></h3>
@@ -394,6 +417,7 @@
 <p class="first admonition-title">Note</p>
 <p class="last">Instead of a complete page reload only the DOM nodes of a module get replaced when the user changes the form values in edit mode. So you have to re-attach listeners on DOM elements on the <tt class="docutils literal"><span class="pre">afterRenderUnit</span></tt> event. If you set your listeners in the <tt class="docutils literal"><span class="pre">initUnit</span></tt> method, the <tt class="docutils literal"><span class="pre">JsModule</span></tt> helper takes care about that.</p>
 </div>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/listening-to-events.zip">Download Listening Events Module Example</a></p>
 </div>
 <div class="section" id="dynamic-css-generation">
 <h2>Dynamic CSS Generation<a class="headerlink" href="#dynamic-css-generation" title="Permalink to this headline">¶</a></h2>
@@ -431,6 +455,7 @@ It also provides a little API e.g. for resolving colors or image URLs.</p>
 <p class="last">The variable name of form fields which should trigger CSS re-generation must begin with &#8220;css&#8221;.</p>
 </div>
 <p>Please refer to the <a class="reference external" href="http://absurdjs.com/pages/css-preprocessing/basics/">AbsurdJS documentation</a> for further syntax details.</p>
+<p><a class="reference external" href="https://github.com/rukzuk/module-examples/archive/dynamic-css-generation.zip">Download Dynamic CSS Generation Module Example</a></p>
 </div>
 <div class="section" id="upload-your-module-via-ftp">
 <span id="upload-via-ftp"></span><h2>Upload Your Module via FTP<a class="headerlink" href="#upload-your-module-via-ftp" title="Permalink to this headline">¶</a></h2>
