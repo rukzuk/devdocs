@@ -59,8 +59,13 @@ function jsdoc_create_docu(){
 }
 
 function fetch_stubs() {
+	echo "------------ Clear existsing stubs in ${ROOT}/stubs"
     rm -rf ${stubsDir} 2>&1 >/dev/null
-    git clone --depth 1 https://github.com/rukzuk/module-api-stubs.git ${stubsDir}
+    echo "------------ Create directory ${ROOT}/stubs"
+    mkdir "${ROOT}/stubs" 2>&1 >/dev/null
+    echo "------------ Start fetching module api stubs from github"
+    git clone --depth 1 https://github.com/rukzuk/module-api-stubs.git ${ROOT}"/stubs"
+    echo "------------ Done"
 }
 
 fetch_stubs
