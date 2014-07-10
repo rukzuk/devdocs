@@ -1,8 +1,29 @@
-<?js var data = obj;var self = this;?><?js= data.attribs + (kind === 'class' ? 'new ' : '')+ (kind === 'event' ? '.. js:function:: ' : '') + (kind === 'type' ? '.. js:function:: ' : '') + name + (kind !== 'event' ? data.signature : ' ') ?>
+<?js
+	var data = obj;
+	var self = this;
+	if (data.description) {
+		data.description = data.description.replace(/CMS\.api\.API\.event\:/g, "http\:\/\/developers\.rukzuk\.com\/js_module_api\.html\#");
+		data.description = data.description.replace(/CMS\.api\.API/g, "http\:\/\/developers\.rukzuk\.com\/js_module_api\.html");
+		data.description = data.description.replace(/\n|\r/g, " ");
+		console.log(data.description);
+	}
+	if(kind !== 'event'){
+		data.signature = data.signature.replace(/(<([^>]+)>)/ig,"");
+		data.signature = data.signature.replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\>/g,'').replace(/&amp;/g,'&');
+	}
+?>
+<?js= data.attribs + (kind === 'class' ? 'new ' : '')+ (kind === 'event' ? '.. js:function:: ' : '') + (kind === 'type' ? '.. js:function:: ' : '') + name + (kind !== 'event' ? data.signature : ' ') ?>
 <?js if (data.params && params.length) { ?><?js= this.partial('params.tmpl', params) ?><?js } ?><?js if (data.returns && returns.length) { ?><?js if (returns.length > 1) { ?><?js returns.forEach(function(r) { ?><?js= self.partial('returns.tmpl', r) ?><?js });?><?js } else {returns.forEach(function(r) { ?><?js= self.partial('returns.tmpl') ?><?js });} } ?>
 
-<?js if (data.summary) { ?><?js= summary ?><?js } ?>
-<?js if (data.description) { ?><?js= data.description ?><?js } ?>
+.. raw:: html
+
+	<?js if (data.summary) { ?><?js= summary ?><?js } ?>
+
+.. raw:: html
+
+	<?js if (data.description) { ?><?js= data.description ?><?js } ?>
+
+
 <?js if (kind === 'event' && data.type && data.type.names) {?>
 =====
 Type

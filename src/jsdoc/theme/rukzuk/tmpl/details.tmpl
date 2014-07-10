@@ -1,3 +1,20 @@
 <?js
-var data = obj;var self = this;if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvaluetype === 'array')) {data.defaultvalue = ".. code-block:: javascript \n\n\t" + data.defaultvalue + "</code></pre>";}?><?js var properties = data.properties; if (properties && properties.length && properties.forEach) {?>
-<?js= this.partial('properties.tmpl', properties) ?><?js print("\r") ?><?js } ?><?js if (data.version) {?>Version: <?js= version ?><?js print("\r") ?><?js } ?><?js if (data.since) {?>**Since:** <?js= since ?><?js print("\r") ?><?js } ?><?js if (data.inherited && data.inherits) { ?>Inherited From: <?js= this.linkto(data.inherits, this.htmlsafe(data.inherits)) ?><?js print("\r") ?><?js } ?><?js if (data.deprecated) { ?>**Deprecated:** <?js if (data.deprecated === true) { ?>Yes<?js }else { ?><?js= data.deprecated ?><?js print("\r") ?><?js } ?><?js } ?><?js if (data.author && author.length) {?>Author: <?js author.forEach(function(a) { ?>* <?js= self.resolveAuthorLinks(a) ?><?js }); ?><?js } ?><?js if (data.copyright) {?>Copyright: <?js= copyright ?><?js print("\r") ?><?js } ?><?js if (data.license) {?>License:<?js= license ?><?js print("\r") ?><?js } ?><?js if (data.defaultvalue) {?>Default Value:* <?js= data.defaultvalue ?><?js print("\r") ?><?js } ?><?js if (data.tutorials && tutorials.length) {?>Tutorials: <?js tutorials.forEach(function(t) { ?>* <?js= self.tutoriallink(t) ?><?js }); ?><?js } ?>
+var data = obj;
+var self = this;
+
+if (data.deprecated){
+	data.deprecated = data.deprecated.replace(/CMS\.api\.API/g, "http\:\/\/developers\.rukzuk\.com\/js_module_api\.html");
+}
+
+
+if (data.defaultvalue && (data.defaultvaluetype === 'object' || data.defaultvaluetype === 'array')) {data.defaultvalue = ".. code-block:: javascript \n\n\t" + data.defaultvalue + "</code></pre>";}?><?js var properties = data.properties; if (properties && properties.length && properties.forEach) {?>
+
+.. raw:: html
+
+	<?js= this.partial('properties.tmpl', properties) ?><?js print("\r") ?><?js } ?><?js if (data.version) {?>Version: <?js= version ?><?js print("\r") ?><?js } ?><?js if (data.since) {?>**Since:** <?js= since ?><?js print("\r") ?><?js } ?><?js if (data.inherited && data.inherits) { ?>Inherited From: <?js= this.linkto(data.inherits, this.htmlsafe(data.inherits)) ?><?js print("\r") ?><?js } ?>
+
+
+.. raw:: html
+
+	<?js if (data.deprecated) { ?><br><br><b>Deprecated: </b><?js if (data.deprecated === true) { ?>Yes<?js }else { ?><?js= data.deprecated ?><?js print("\r") ?><?js } ?><?js } ?><?js if (data.author && author.length) {?>Author: <?js author.forEach(function(a) { ?>* <?js= self.resolveAuthorLinks(a) ?><?js }); ?><?js } ?><?js if (data.copyright) {?>Copyright: <?js= copyright ?><?js print("\r") ?><?js } ?><?js if (data.license) {?>License:<?js= license ?><?js print("\r") ?><?js } ?><?js if (data.defaultvalue) {?>Default Value:* <?js= data.defaultvalue ?><?js print("\r") ?><?js } ?><?js if (data.tutorials && tutorials.length) {?>Tutorials: <?js tutorials.forEach(function(t) { ?>* <?js= self.tutoriallink(t) ?><?js }); ?><?js } ?>
+	<br><br>
