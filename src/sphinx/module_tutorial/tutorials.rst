@@ -39,7 +39,8 @@ Your First Module
 #. Refresh the module repository by clicking the refresh button in the "Module Development" pop-up.
 #. Test your new module.
 
-`Download Module Example <https://github.com/rukzuk/module-examples/archive/your-first-module.zip>`_
+**Module Example**
+`Download <https://github.com/rukzuk/module-examples/archive/your-first-module.zip>`_ | `Github <https://github.com/rukzuk/module-examples/tree/your-first-module>`_
 
 ###############
 Advanced Module
@@ -84,8 +85,8 @@ Advanced Module
             }
         }
 
-
-`Download Advanced Module Example <https://github.com/rukzuk/module-examples/archive/advanced-module.zip>`_
+**Module Example**
+`Download <https://github.com/rukzuk/module-examples/archive/advanced-module.zip>`_ | `Github <https://github.com/rukzuk/module-examples/tree/advanced-module>`_
 
 
 .. _module-user-interface:
@@ -212,7 +213,8 @@ All declared unit data (see module "edit mode" editor) can be accessed by the fo
     The ``CMS`` API is globally available throughout the rukzuk web application while in edit mode. That means the custom module will not be able to consume information or data from the ``CMS`` API in an live environment (e.g. live hosting).
 
 
-`Download Access Unit Data Module Example <https://github.com/rukzuk/module-examples/archive/access-unit-data.zip>`_
+**Module Example**
+`Download <https://github.com/rukzuk/module-examples/archive/access-unit-data.zip>`_ | `Github <https://github.com/rukzuk/module-examples/tree/access-unit-data>`_
 
 ################################
 Listening to Events in Edit Mode
@@ -247,7 +249,8 @@ Please have a look at the :doc:`JS Module API <js_module_api>` for all available
     Instead of a complete page reload only the DOM nodes of a module get replaced when the user changes the form values in edit mode. So you have to re-attach listeners on DOM elements on the ``afterRenderUnit`` event. If you set your listeners in the ``initUnit`` method, the ``JsModule`` helper takes care about that.
 
 
-`Download Listening Events Module Example <https://github.com/rukzuk/module-examples/archive/listening-to-events.zip>`_
+**Module Example**
+`Download <https://github.com/rukzuk/module-examples/archive/listening-to-events.zip>`_ | `Github <https://github.com/rukzuk/module-examples/tree/listening-to-events>`_
 
 
 ######################
@@ -283,7 +286,8 @@ It also provides a little API e.g. for resolving colors or image URLs.
 Please refer to the `AbsurdJS documentation <http://absurdjs.com/pages/css-preprocessing/basics/>`_ for further syntax details.
 
 
-`Download Dynamic CSS Generation Module Example <https://github.com/rukzuk/module-examples/archive/dynamic-css-generation.zip>`_
+**Module Example**
+`Download <https://github.com/rukzuk/module-examples/archive/dynamic-css-generation.zip>`_ | `Github <https://github.com/rukzuk/module-examples/tree/dynamic-css-generation>`_
 
 
 .. _upload-via-ftp:
