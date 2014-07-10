@@ -106,9 +106,9 @@ Prerequisites
 
     * To endorse best development experience, it is advised to set-up your development environment to synchronize your development work via FTP.
     * alternatively you can use the module import facility which allows to import modules as ZIP files
-* Module API stubs (API interface reference) - `Download from Github <https://github.com/rukzuk/module_api_stubs/archive/master.zip>`_
+* Module API stubs (API interface reference) - `Download <https://github.com/rukzuk/module-api-stubs/archive/master.zip>`_ | `Github <https://github.com/rukzuk/module-api-stubs>`_
 
-`rukzuk Github <https://github.com/rukzuk>`_
+`rukzuk on Github <https://github.com/rukzuk>`_
 
 .. warning::
 
