@@ -92,7 +92,6 @@ editMode.css   Contains static CSS used for the edit mode.
 css.js         Logic for dynamic CSS generation based on the unit form values.
 =============  ===================================================================================
 
-
 .. note::
 
     All folders named "notlive" are not going to be published to a live environment.
@@ -114,52 +113,53 @@ Prerequisites
 
     This documentation corresponds to the module API version 1.1 and above. There is no backwards compatibility to older versions. Although existing modules made with an older version of the module API will continue to work.
 
-######
-Render
-######
-
-The render is responsible for going through a node tree containing units and its module to tell them to process and output their content.
-
-TODO
 
 ############
 Module API's
 ############
 
 
-###################
+-------------------
 SimpleModule Helper
-###################
+-------------------
 
 The default root module "rz_root" comes with some wrappers to simplify the module development.
 For example it provides the class ``SimpleModule`` which is inherited by all default modules. It also has some convenient helpers for e.g. dynamic CSS generation, responsive images or HTML tag building.
 
-TODO
-
-#########
+---------
 PHP API's
-#########
+---------
 
-* :doc:`Render API <php_api/php_render_api>`
-
+:doc:`Render API <php_api/php_render_api>`
+: The render is responsible for going through a node tree containing units and its module to tell them to process and output their content.
     * access parent(s) and child(ren)
     * access to other API's such as CSS API, Head API
-* Unit API
 
-    * get unit data information
-* ModuleInfo API
+*Unit API* : Accessing unit data information.
 
-    * provides information about the module used in the current unit
-* :doc:`CSS API <php_api/php_css_api>`
-* :doc:`Head API <php_api/php_head_api>`
+	* the module can access unit information or data in edit mode as well as in an live environment
+	* also accessible through JavaScript ( see :doc:`JS Module API <js_module_api>` )
+
+*ModuleInfo API* : Provides information about the module used in the current unit.
+
+	* access module info storage
+	* also accessible through JavaScript ( see :doc:`JS Module API <js_module_api>` )
+
+:doc:`CSS API <php_api/php_css_api>`
+: Creates the css code for a single unit and writes it to output buffer.
+
+:doc:`Head API <php_api/php_head_api>`
+: HTML Head - insert custom tags in <head> of the page.
+	* modify html head
+	* add further html elements inside the <head> tag
 
 .. note::
 
     All above API's are available in 'edit' & 'live' render mode except for the CSS API which is only available in 'edit' mode.
 
-################
+----------------
 JavaScript API's
-################
+----------------
 
 :doc:`JS Module API <js_module_api>`
 
