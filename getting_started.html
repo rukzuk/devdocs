@@ -63,11 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-is-a-unit">What is a Unit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-directory-structure">Module Directory Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#render">Render</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-api-s">Module API&#8217;s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#simplemodule-helper">SimpleModule Helper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#php-api-s">PHP API&#8217;s</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#javascript-api-s">JavaScript API&#8217;s</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
@@ -289,58 +285,56 @@ output the result. Whereby a module style component attaches style attributes to
 <p class="last">This documentation corresponds to the module API version 1.1 and above. There is no backwards compatibility to older versions. Although existing modules made with an older version of the module API will continue to work.</p>
 </div>
 </div>
-<div class="section" id="render">
-<h2>Render<a class="headerlink" href="#render" title="Permalink to this headline">¶</a></h2>
-<p>The render is responsible for going through a node tree containing units and its module to tell them to process and output their content.</p>
-<p>TODO</p>
-</div>
 <div class="section" id="module-api-s">
 <h2>Module API&#8217;s<a class="headerlink" href="#module-api-s" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="simplemodule-helper">
-<h2>SimpleModule Helper<a class="headerlink" href="#simplemodule-helper" title="Permalink to this headline">¶</a></h2>
+<h3>SimpleModule Helper<a class="headerlink" href="#simplemodule-helper" title="Permalink to this headline">¶</a></h3>
 <p>The default root module &#8220;rz_root&#8221; comes with some wrappers to simplify the module development.
 For example it provides the class <tt class="docutils literal"><span class="pre">SimpleModule</span></tt> which is inherited by all default modules. It also has some convenient helpers for e.g. dynamic CSS generation, responsive images or HTML tag building.</p>
-<p>TODO</p>
 </div>
 <div class="section" id="php-api-s">
-<h2>PHP API&#8217;s<a class="headerlink" href="#php-api-s" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first"><a class="reference internal" href="php_api/php_render_api.html"><em>Render API</em></a></p>
+<h3>PHP API&#8217;s<a class="headerlink" href="#php-api-s" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="php_api/php_render_api.html"><em>Render API</em></a>
+: The render is responsible for going through a node tree containing units and its module to tell them to process and output their content.</p>
 <blockquote>
 <div><ul class="simple">
 <li>access parent(s) and child(ren)</li>
 <li>access to other API&#8217;s such as CSS API, Head API</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first">Unit API</p>
+<p><em>Unit API</em> : Accessing unit data information.</p>
 <blockquote>
 <div><ul class="simple">
-<li>get unit data information</li>
+<li>the module can access unit information or data in edit mode as well as in an live environment</li>
+<li>also accessible through JavaScript ( see <a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a> )</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first">ModuleInfo API</p>
+<p><em>ModuleInfo API</em> : Provides information about the module used in the current unit.</p>
 <blockquote>
 <div><ul class="simple">
-<li>provides information about the module used in the current unit</li>
+<li>access module info storage</li>
+<li>also accessible through JavaScript ( see <a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a> )</li>
 </ul>
 </div></blockquote>
-</li>
-<li><p class="first"><a class="reference internal" href="php_api/php_css_api.html"><em>CSS API</em></a></p>
-</li>
-<li><p class="first"><a class="reference internal" href="php_api/php_head_api.html"><em>Head API</em></a></p>
-</li>
+<p><a class="reference internal" href="php_api/php_css_api.html"><em>CSS API</em></a>
+: Creates the css code for a single unit and writes it to output buffer.</p>
+<p><a class="reference internal" href="php_api/php_head_api.html"><em>Head API</em></a>
+: HTML Head - insert custom tags in &lt;head&gt; of the page.</p>
+<blockquote>
+<div><ul class="simple">
+<li>modify html head</li>
+<li>add further html elements inside the &lt;head&gt; tag</li>
 </ul>
+</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">All above API&#8217;s are available in &#8216;edit&#8217; &amp; &#8216;live&#8217; render mode except for the CSS API which is only available in &#8216;edit&#8217; mode.</p>
 </div>
 </div>
 <div class="section" id="javascript-api-s">
-<h2>JavaScript API&#8217;s<a class="headerlink" href="#javascript-api-s" title="Permalink to this headline">¶</a></h2>
+<h3>JavaScript API&#8217;s<a class="headerlink" href="#javascript-api-s" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a></p>
+</div>
 </div>
 </div>
 
