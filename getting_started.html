@@ -285,7 +285,7 @@ output the result. Whereby a module style component attaches style attributes to
 <h2>Module API&#8217;s<a class="headerlink" href="#module-api-s" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="simplemodule-helper">
 <h3>SimpleModule Helper<a class="headerlink" href="#simplemodule-helper" title="Permalink to this headline">¶</a></h3>
-<p>The default root module &#8220;rz_root&#8221; comes with some wrappers to simplify the module development.
+<p>The default root module &#8220;rz_root&#8221; comes with some wrappers for the API&#8217;s mentioned below to simplify the module development.
 For example it provides the class <tt class="docutils literal"><span class="pre">SimpleModule</span></tt> which is inherited by all default modules. It also has some convenient helpers for e.g. dynamic CSS generation, responsive images or HTML tag building.</p>
 </div>
 <div class="section" id="php-api-s">
@@ -324,17 +324,21 @@ For example it provides the class <tt class="docutils literal"><span class="pre"
 </div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">All above API&#8217;s are available in &#8216;edit&#8217; &amp; &#8216;live&#8217; render mode except for the CSS API which is only available in &#8216;edit&#8217; mode.</p>
+<p class="last">All above PHP API&#8217;s are available in &#8216;edit&#8217; &amp; &#8216;live&#8217; render mode except for the CSS API which is only available in &#8216;edit&#8217; mode.</p>
 </div>
 </div>
 <div class="section" id="javascript-api-s">
 <h3>JavaScript API&#8217;s<a class="headerlink" href="#javascript-api-s" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The JavaScript API is only available in &#8216;edit&#8217; render mode, e.g. the page or design is beeing edited inside the rukzuk application.</p>
 </div>
-<div class="section" id="when-to-use-the-module-php-api-s-and-javascript-api">
-<h3>When to use the module PHP API&#8217;s and JavaScript API<a class="headerlink" href="#when-to-use-the-module-php-api-s-and-javascript-api" title="Permalink to this headline">¶</a></h3>
-<p>Use the PHP API&#8217;s when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data. Furthermore, the PHP API&#8217;s provides the facility for rendering and output module content in conjunction with unit and module data.</p>
-<p>The JavaScript API is useful when you require access to unit and module data on your client side implementation of your module. Moreover, the JavaScript API accommodates functions to help you to react on appropriate circumstances with the rukzuk client-side framework.</p>
+</div>
+<div class="section" id="when-to-use-which-api">
+<h3>When to use which API<a class="headerlink" href="#when-to-use-which-api" title="Permalink to this headline">¶</a></h3>
+<p>The PHP API&#8217;s provides the facility for rendering and output module content in conjunction with unit and module data. Use the PHP API&#8217;s when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data.</p>
+<p>The JavaScript API is only available in &#8216;edit&#8217; mode and accommodates functions to interact with the rukzuk client-side application. It&#8217;s useful when you require access to unit and module data on your client side implementation of your module.</p>
 </div>
 </div>
 </div>

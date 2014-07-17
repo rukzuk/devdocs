@@ -119,7 +119,7 @@ Module API's
 SimpleModule Helper
 -------------------
 
-The default root module "rz_root" comes with some wrappers to simplify the module development.
+The default root module "rz_root" comes with some wrappers for the API's mentioned below to simplify the module development.
 For example it provides the class ``SimpleModule`` which is inherited by all default modules. It also has some convenient helpers for e.g. dynamic CSS generation, responsive images or HTML tag building.
 
 ---------
@@ -151,7 +151,7 @@ PHP API's
 
 .. note::
 
-    All above API's are available in 'edit' & 'live' render mode except for the CSS API which is only available in 'edit' mode.
+    All above PHP API's are available in 'edit' & 'live' render mode except for the CSS API which is only available in 'edit' mode.
 
 ----------------
 JavaScript API's
@@ -159,10 +159,15 @@ JavaScript API's
 
 :doc:`JS Module API <js_module_api>`
 
----------------------------------------------------
-When to use the module PHP API's and JavaScript API
----------------------------------------------------
+.. note::
 
-Use the PHP API's when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data. Furthermore, the PHP API's provides the facility for rendering and output module content in conjunction with unit and module data.
+    The JavaScript API is only available in 'edit' render mode, e.g. the page or design is beeing edited inside the rukzuk application.
 
-The JavaScript API is useful when you require access to unit and module data on your client side implementation of your module. Moreover, the JavaScript API accommodates functions to help you to react on appropriate circumstances with the rukzuk client-side framework.
+
+---------------------
+When to use which API
+---------------------
+
+The PHP API's provides the facility for rendering and output module content in conjunction with unit and module data. Use the PHP API's when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data. 
+
+The JavaScript API is only available in 'edit' mode and accommodates functions to interact with the rukzuk client-side application. It's useful when you require access to unit and module data on your client side implementation of your module.
