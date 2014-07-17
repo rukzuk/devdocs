@@ -280,10 +280,6 @@ output the result. Whereby a module style component attaches style attributes to
 </li>
 </ul>
 <p><a class="reference external" href="https://github.com/rukzuk">rukzuk on Github</a></p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This documentation corresponds to the module API version 1.1 and above. There is no backwards compatibility to older versions. Although existing modules made with an older version of the module API will continue to work.</p>
-</div>
 </div>
 <div class="section" id="module-api-s">
 <h2>Module API&#8217;s<a class="headerlink" href="#module-api-s" title="Permalink to this headline">¶</a></h2>
@@ -334,6 +330,11 @@ For example it provides the class <tt class="docutils literal"><span class="pre"
 <div class="section" id="javascript-api-s">
 <h3>JavaScript API&#8217;s<a class="headerlink" href="#javascript-api-s" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference internal" href="js_module_api.html"><em>JS Module API</em></a></p>
+</div>
+<div class="section" id="when-to-use-the-module-php-api-s-and-javascript-api">
+<h3>When to use the module PHP API&#8217;s and JavaScript API<a class="headerlink" href="#when-to-use-the-module-php-api-s-and-javascript-api" title="Permalink to this headline">¶</a></h3>
+<p>Use the PHP API&#8217;s when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data. Furthermore, the PHP API&#8217;s provides the facility for rendering and output module content in conjunction with unit and module data.</p>
+<p>The JavaScript API is useful when you require access to unit and module data on your client side implementation of your module. Moreover, the JavaScript API accommodates functions to help you to react on appropriate circumstances with the rukzuk client-side framework.</p>
 </div>
 </div>
 </div>

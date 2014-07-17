@@ -109,10 +109,6 @@ Prerequisites
 
 `rukzuk on Github <https://github.com/rukzuk>`_
 
-.. warning::
-
-    This documentation corresponds to the module API version 1.1 and above. There is no backwards compatibility to older versions. Although existing modules made with an older version of the module API will continue to work.
-
 
 ############
 Module API's
@@ -163,3 +159,10 @@ JavaScript API's
 
 :doc:`JS Module API <js_module_api>`
 
+---------------------------------------------------
+When to use the module PHP API's and JavaScript API
+---------------------------------------------------
+
+Use the PHP API's when your custom module ask for server-side functions such as php mail() for example and you need access to unit and module data. Furthermore, the PHP API's provides the facility for rendering and output module content in conjunction with unit and module data.
+
+The JavaScript API is useful when you require access to unit and module data on your client side implementation of your module. Moreover, the JavaScript API accommodates functions to help you to react on appropriate circumstances with the rukzuk client-side framework.
