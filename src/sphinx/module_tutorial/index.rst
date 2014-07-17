@@ -16,7 +16,7 @@ Getting Started
 
 * Requirements: :doc:`What do I need to know to get started <getting_started>`
 * Tutorial: :doc:`Getting Started with rukzuk module development <tutorials>`
-* Render API docs: :doc:`PHP Render API <php_api/php_render_api>`
+* Module API docs: `Get an overview of all available API's <getting_started.html#module-api-s>`_
 
 
 Getting Help
