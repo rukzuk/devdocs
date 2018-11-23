@@ -293,15 +293,15 @@ Please refer to the `AbsurdJS documentation <http://absurdjs.com/pages/css-prepr
 .. _upload-via-ftp:
 
 ##########################
-Upload Your Module via FTP
+Upload Your Module via WebDAV
 ##########################
 
-You can directly upload your module through FTP. The FTP connection details can be found in the "Module Development" pop-up in your rukzuk space.
+You can directly upload your module through WebDAV. The WebDAV connection details can be found in the "Module Development" pop-up in your rukzuk space. 
 
-#############################
-Export and Import Your Module
-#############################
+Recommended Clients:
 
-To easily use your module in other websites or rukzuk spaces you can use the export and import facility in the "Module Development" pop-up.
+* Windows: `WinSCP <https://winscp.net>`_ or `Cyberduck <https://cyberduck.io/>`_
+* Apple OSX: Finder or `Cyberduck <https://cyberduck.io/>`_
+* Linux: GNOME Files (Nautilus) or Dolphin
 
-.. image:: _static/images/rukzuk_module_import.png
+Upload automation is possible using `grunt-simpledav-deploy <https://github.com/carlos22/grunt-simpledav-deploy>`_
